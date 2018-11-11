@@ -28,7 +28,7 @@
             </div>
 
             <div class="form-group">
-                <asp:Label ID="PassWord" runat="server" Text="PassWord" CssClass="control-label col-sm-2"></asp:Label>
+                <asp:Label ID="PassWord" runat="server" Text="PW " CssClass="control-label col-sm-2"></asp:Label>
                 <div class="col-sm-10">     
                     <asp:TextBox ID="TxtPassWord" runat="server"  CssClass="form-control" TextMode="Password"></asp:TextBox>
                 </div>

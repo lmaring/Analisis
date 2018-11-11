@@ -15,7 +15,6 @@ public partial class CreateUser : System.Web.UI.Page
 
     }
     public static IUserServices userServices = new UserServices();
-    int id = 1;
 
     protected void Button1_Click(object sender, EventArgs e)
     {
@@ -25,6 +24,7 @@ public partial class CreateUser : System.Web.UI.Page
         int telefono=int.Parse(TextTel.Text);
         string profesion= TextProf.Text;
         string vivienda= TextViv.Text;
+        int id = userServices.lastId();
         bool UsersAux = userServices.CreateUser(nameUser, passwordUser, id, mail, telefono, profesion, vivienda);
 
         if (UsersAux == true)

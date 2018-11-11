@@ -14,7 +14,7 @@ public class UserServices : IUserServices
         aux.DataSource = "lmaring.database.windows.net";
         aux.UserID = "admin1997";
         aux.Password = "Armago97";
-        aux.InitialCatalog = "InnovaSolution";
+        aux.InitialCatalog = "InnovaSolution"; 
         return aux.ConnectionString;
     }
     /// <summary>
@@ -32,22 +32,29 @@ public class UserServices : IUserServices
         SqlDataReader rs;
         conexion.Close();
         conexion.Open();
-        sql = "SELECT * FROM Cliente where UserName ='lmaring50'  and PassWord ='123'";
+        sql = "SELECT * FROM Cliente where UserName ='"+userName+"'  and PassWord ='"+pass+"' ;";
         com = conexion.CreateCommand();
         com.CommandText = sql;
         rs = com.ExecuteReader();
-        rs.Read();
 
-        if (rs.Read())
+        try
+        {
+            while (rs.Read())
+            {
+                int id = Int32.Parse(rs[0].ToString());
+                string UserName = rs[1].ToString();
+                string PassWord = rs[2].ToString();
+                string mail = rs[3].ToString();
+                int telefono = Int32.Parse(rs[4].ToString());
+                string profesion = rs[5].ToString();
+                string vivienda = rs[6].ToString();
+                aux = new User (id, userName, PassWord, mail, telefono, profesion, vivienda);
+            }
+            conexion.Close();
+        }
+        catch(Exception e)
         {
 
-
-            string PassWord = rs[3].ToString();
-            string mail = rs[4].ToString();
-            int telefono = Int32.Parse(rs[5].ToString());
-            string profesion = rs[6].ToString();
-            string vivienda = rs[7].ToString();
-            conexion.Close();
         }
         return aux;
     }
@@ -90,6 +97,7 @@ public class UserServices : IUserServices
     public bool CreateUser(string user, string pass, int id, string mail, int telefono, string profesion, string vivienda)
     {
         bool crear = false;
+        conexion.Close();
         try
         {
             String sql;
@@ -119,5 +127,35 @@ public class UserServices : IUserServices
         return crear;
     }
 
+    public int lastId()
+    {
+        int Id =0 ;
 
+        try
+        {
+            String sql;
+            SqlCommand com;
+            SqlDataReader rs;
+            conexion.Close();
+            conexion.Open();
+            sql = "select count(Id) from cliente;";
+            com = conexion.CreateCommand();
+            com.CommandText = sql;
+            rs = com.ExecuteReader();
+
+            while (rs.Read())
+            {
+                 Id = Int32.Parse(rs[0].ToString())+1;
+            }
+            conexion.Close();
+
+        }
+        catch (Exception e)
+        {
+            Id = 0;
+        }
+
+
+        return Id;
+    }
 }
