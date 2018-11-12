@@ -21,7 +21,7 @@ public partial class Login : System.Web.UI.Page
         User existe = userServices.Login(nameUser, passwordUser);
         if (existe != null)
         {
-            Response.Write("<script>alert('El Usuario Existe, Entro con Existo  '); </script>");
+            Response.Redirect("HomeUser.aspx");
 
         }
         else

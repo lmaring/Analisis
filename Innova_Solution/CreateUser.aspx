@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
 <body>
+    &nbsp;<div class="text-center">
     <div class="container well contenedor">
         <div class="row">
             <div class="col-xs-12">
@@ -70,6 +71,7 @@
         </form>
 
     </div>
-
+        <img src="imagenes/banner.jpg" class="auto-style5" width="660Px" />
+    </div>
 </body>
 </html>

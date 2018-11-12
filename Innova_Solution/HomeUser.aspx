@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Index.aspx.cs" Inherits="Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="HomeUser.aspx.cs" Inherits="HomeUser" %>
+
 
 <!DOCTYPE html>
 
@@ -20,14 +21,6 @@
             line-height: 20px;
             width: 27px;
         }
-        .auto-style2 {
-            width: 1170px;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
     </style>
 </head>
 <body>
@@ -46,33 +39,19 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="Login.aspx">Login</a></li>
-                        <li><a href="CreateUser.aspx">Registre</a></li>
+                        <li class="active"><a href="HomeUser.aspx">Menu Principal</a></li>
+                        <li><a href="Accreditation.aspx">Acreditaciones</a></li>
+                        <li><a href="UserInfo.aspx">Ajuste Cuenta</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-    <div class="auto-style2">
+    <div class="container">
         <br />
         <br />
         <br />
-        <h1 class="text-left">Quienes Somos?</h1>
-           <p class="text-left"> Innova Solutions se encarga en capacitar personas en procesos de capacitacion como lo
-            que seria institutos y tienen convenios con varias empresas para certificar como lo es en 
-            cisco, Adobe, PMP, ITIL, COBIT, SCRUM, SIX SIGMA, Manipulacion de Alimento y pruebas de colegios 
-            profesionales. Cuando se termina el curso cierto estudiantes decian que le hacia falta un practica del
-            curso una vez terminado entonces la idea es crear un apliccaion departe una particio activa donde se puedan
-            logear y realizar cierto cuestionaros con preguntas aleatorias en diferentes areas y el usuario tiene la 
-            capacidad selecionarla sobre una base de datos de preguntas pero solo se muestran 10 por cuestionaro y son
-            respuestas de si o no, tambien tiene la capacidad de respuesta multiple. tener la capacidad preguntas, nota 
-            total, tiempo maximo de contestar ciertas preguntas. maximo de nota para aprovar el examen y que tipo de cuestionario es.</p>
-        <tr style="width:1100px; height:300px">
-            <td colspan="3">
-                <hr color="black" height: "10px">
-                <img src="imagenes/banner.jpg" class="auto-style5" width="660Px" />
-            </td>
-        </tr>
+        <h1>Menu Principal</h1>
     </div>
 
     </form>
@@ -81,3 +60,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>
+   

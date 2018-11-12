@@ -11,6 +11,7 @@
     
 </head>
 <body>
+    <div class="text-center">
     <div class="container well contenedor">
         <div class="row">
             <div class="col-xs-12">
@@ -42,6 +43,8 @@
             </div>
     </form>
 
+    </div>
+         <img src="imagenes/banner.jpg" class="auto-style5" width="660Px" />
     </div>
     
 </body>
