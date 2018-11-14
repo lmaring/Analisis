@@ -8,10 +8,12 @@ using System.Web;
 /// </summary>
 public class Test
 {
-    public Test()
+    public int id { get; set; }
+    public string nombre { get; set; }
+
+    public Test(int id, string nombre)
     {
-        //
-        // TODO: Add constructor logic here
-        //
+        this.id = id;
+        this.nombre = nombre;
     }
 }

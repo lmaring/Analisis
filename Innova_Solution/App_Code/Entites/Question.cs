@@ -8,5 +8,14 @@ using System.Web;
 /// </summary>
 public class Question
 {
+    public int id { get; set; }
+    public string pregunta { get; set; }
+    public List<string> repuesta { get; set; }
 
+    public Question(int id, string pregunta, List<string> repuesta)
+    {
+        this.id = id;
+        this.pregunta =pregunta;
+        this.repuesta = repuesta;
+    }
 }
