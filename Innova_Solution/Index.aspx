@@ -47,7 +47,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="Login.aspx">Login</a></li>
-                        <li><a href="CreateUser.aspx">Registre</a></li>
+                        <li><a href="CreateUser.aspx">Register</a></li>
                     </ul>
                 </div>
             </div>
