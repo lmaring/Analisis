@@ -12,10 +12,10 @@ public partial class Login : System.Web.UI.Page
 
     }
     public static IUserServices userServices = new UserServices();
-    int id = 0;
+  
     protected void Button1_Click(object sender, EventArgs e)
     {
-        List<User> Users = (List<User>)Session["Data"];
+        //List<User> Users = (List<User>)Session["Data"];
         string nameUser = TxtUserName.Text;
         string passwordUser = TxtPassWord.Text;
         User existe = userServices.Login(nameUser, passwordUser);
