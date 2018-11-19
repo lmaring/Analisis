@@ -11,4 +11,22 @@ public partial class Accreditation : System.Web.UI.Page
     {
 
     }
+
+    protected void btn_quizScrum_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Test.aspx");
+    }
+
+    protected void btn_ITIL_Click(object sender, EventArgs e)
+    {
+        if(btn_ITIL.Text == "Matricular")
+        {
+            //Response.Redirect("Accreditation.aspx");
+            btn_ITIL.Text = "Realizar quiz";
+        }
+        else
+        {
+            Response.Redirect("Test.aspx");
+        }
+    }
 }
