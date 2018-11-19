@@ -42,28 +42,31 @@
                     <tbody>
                       <tr>
                         <td>Usuario:</td>
-                        <td></td>
+                          <asp:Label ID="lbl_User" runat="server" Text=""></asp:Label>
                       </tr>
                       <tr>
-                        <td>Cotraseña:</td>
-                        <td>**********</td>
+                        <td>Contraseña:</td>
+                        <asp:Label ID="lbl_Pass" runat="server" Text="******"></asp:Label>
                       </tr>
                       <tr>
                         <td>Email</td>
-                        <td><a href="mailto:info@support.com">info@support.com</a></td>
+                        <asp:Label ID="lbl_correo" runat="server" Text="info@support.com"></asp:Label>
                       </tr>
                         <tr>
                         <td>Profesion</td>
-                        <td>Pastor Evangelico</td>
+                        <asp:Label ID="lbl_profesion" runat="server" Text="Pastor Evangelico"></asp:Label>
                         </tr>
                         <tr>
                         <td>Vivienda</td>
-                        <td>San Jose</td>
+                        <asp:Label ID="lblVivienda" runat="server" Text="Moravia Miedo"></asp:Label>
                         </tr>
                         <tr>
                         <td>Phone Number</td>
-                        <td>8888-8888
-                        </td>
+                        <asp:Label ID="lbl_telefono" runat="server" Text="8888-8888"></asp:Label>
+                        </tr>
+                        <tr>
+                        <td>Tipo de Cuenta</td>
+                        <asp:Label ID="lbl_TipoCuenta" runat="server" Text="-"></asp:Label>
                         </tr>
                     </tbody>
                   </table>

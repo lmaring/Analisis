@@ -18,7 +18,7 @@
             </div>
         </div>
         <form runat="server" class="form-horizontal">
-            <asp:ScriptManager ID="smLogin" runat="server"></asp:ScriptManager>
+            &nbsp;<asp:ScriptManager ID="smLogin" runat="server"></asp:ScriptManager>
 
             <div class="form-group">
                 <asp:Label ID="UserName" runat="server" Text="User" CssClass="control-label col-sm-2"></asp:Label>
