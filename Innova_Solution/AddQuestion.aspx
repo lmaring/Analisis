@@ -26,7 +26,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="MenuPrincipal.aspx">Menu Principal</a></li>
                         <li class="active" ><a href="Acreditaciones.aspx">Acreditaciones</a></li>
-                        <li><a href="AjusteUsuario.aspx">Ajuste Cuenta</a></li>
+                        <li><a href="UserInfo.aspx">Ajuste Cuenta</a></li>
+                        <li><a href="Index.aspx">Salir</a></li>
                     </ul>
                 </div>
             </div>
@@ -39,7 +40,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3><span class="label label-warning" id="qid">Enunciado:</span> Titulo de la pregunta</h3>
+                            <h3><span class="label label-warning" id="qid">Enunciado:</span> Pregunta.</h3>
                             <br />
                         </div>
                     <div class="modal-body">
@@ -50,7 +51,7 @@
                                 <div class="blockG" id="rotateG_03"></div>
                                 <div class="blockG" id="rotateG_04"></div> 
                             </div>
-                        </div>
+                            Respuestas?</div>
 
                         <div class="quiz" id="quiz">
                             <br />

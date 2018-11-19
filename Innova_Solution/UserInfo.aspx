@@ -25,9 +25,10 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="HomeUser.aspx">Menu Principal</a></li>
+                        <li><a href="HomeUser.aspx">Menu Principal</a></li>
                         <li><a href="Accreditation.aspx">Acreditaciones</a></li>
-                        <li><a href="UserInfo.aspx">Ajuste Cuenta</a></li>
+                        <li class="active"><a href="UserInfo.aspx">Ajuste Cuenta</a></li>
+                        <li><a href="Index.aspx">Salir</a></li>
                     </ul>
                 </div>
             </div>
@@ -36,13 +37,13 @@
         <div>
             <br />
             <br />
-            <h1>Ajuste de Usuario</h1> 
-            <div class=" col-md-9 col-lg-9 "> 
-                  <table  class="table table-user-information">
+            <div class ="container"> 
+                <h1>Ajuste de Usuario</h1> 
+                  <table class="table">
                     <tbody>
                       <tr>
                         <td>Usuario:</td>
-                          <asp:Label ID="lbl_User" runat="server" Text=""></asp:Label>
+                         <td><asp:Label ID="lbl_User" runat="server" Text="Usuario Name"></asp:Label></td>
                         </tr>
                         <tr>
                         <td>Contraseña:</td>
@@ -70,7 +71,7 @@
                         </tr>
                     </tbody>
                   </table>
-                  <a href="Payment.aspx" class="btn btn-primary">Premium</a>
+                <asp:Button ID="btn_Payment" CssClass="btn btn-primary" runat="server" Text="Premium" OnClick="btn_Payment_Click" />
                   <a href="#" class="btn btn-primary">Guardar Cambios</a>
                 </div>
         </div>

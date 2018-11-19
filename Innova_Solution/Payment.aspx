@@ -24,17 +24,17 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="MenuPrincipal.aspx">Menu Principal</a></li>
-                        <li><a href="Acreditaciones.aspx">Acreditaciones</a></li>
-                        <li><a href="AjusteUsuario.aspx">Ajuste Cuenta</a></li>
+                        <li><a href="HomeUser.aspx">Menu Principal</a></li>
+                        <li><a href="Accreditation.aspx">Acreditaciones</a></li>
+                        <li class="active"><a href="UserInfo.aspx">Ajuste Cuenta</a></li>
+                        <li><a href="Index.aspx">Salir</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <br /><br /><br />
-        <asp:ImageButton ID="imgBack" runat="server" ImageUrl="~/Imagenes/backarrow.png" Height="50px" Width="50px" OnClick="imgBack_Click" />
         <fieldset>
-      <legend>Payment</legend>
+            <h2 align="center">Payment</h2>
       <div class="form-group">
         <label class="col-sm-3 control-label" for="card-holder-name">Name on Card</label>
         <div class="col-sm-9">
@@ -96,9 +96,10 @@
       <br /><br />
       <div class="form-group">
         <div class="col-sm-offset-3 col-sm-12 col-md-12">
-            <asp:Button ID="btn_confirmarPago" runat="server" Text="Realizar Pago" ForeColor="#6699FF" BackColor="#CCFFFF" />
+            <asp:Button ID="btn_confirmarPago" CssClass="btn btn-primary"  runat="server" Text="Realizar Pago" />
         </div>
       </div>
+                    <asp:ImageButton ID="imgBack" runat="server" ImageUrl="~/Imagenes/backarrow.png" Height="50px" Width="50px" OnClick="imgBack_Click" />
     </fieldset>
     </form>
 

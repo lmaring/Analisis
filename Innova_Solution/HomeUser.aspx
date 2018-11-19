@@ -42,6 +42,7 @@
                         <li class="active"><a href="HomeUser.aspx">Menu Principal</a></li>
                         <li><a href="Accreditation.aspx">Acreditaciones</a></li>
                         <li><a href="UserInfo.aspx">Ajuste Cuenta</a></li>
+                        <li><a href="Index.aspx">Salir</a></li>
                     </ul>
                 </div>
             </div>
@@ -52,6 +53,15 @@
         <br />
         <br />
         <h1>Menu Principal</h1>
+         <p class="text-left"> Innova Solutions se encarga en capacitar personas en procesos de capacitacion como lo
+            que seria institutos y tienen convenios con varias empresas para certificar como lo es en 
+            cisco, Adobe, PMP, ITIL, COBIT, SCRUM, SIX SIGMA, Manipulacion de Alimento y pruebas de colegios 
+            profesionales. Cuando se termina el curso cierto estudiantes decian que le hacia falta un practica del
+            curso una vez terminado entonces la idea es crear un apliccaion departe una particio activa donde se puedan
+            logear y realizar cierto cuestionaros con preguntas aleatorias en diferentes areas y el usuario tiene la 
+            capacidad selecionarla sobre una base de datos de preguntas pero solo se muestran 10 por cuestionaro y son
+            respuestas de si o no, tambien tiene la capacidad de respuesta multiple. tener la capacidad preguntas, nota 
+            total, tiempo maximo de contestar ciertas preguntas. maximo de nota para aprovar el examen y que tipo de cuestionario es.</p>
     </div>
 
     </form>

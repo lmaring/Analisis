@@ -14,6 +14,6 @@ public partial class AddQuestion : System.Web.UI.Page
 
     protected void imgBack_Click(object sender, ImageClickEventArgs e)
     {
-        Response.Redirect("MenuAdminAcred.aspx");
+        Response.Redirect("AddAccreditation.aspx");
     }
 }
