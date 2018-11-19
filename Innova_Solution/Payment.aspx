@@ -31,16 +31,14 @@
                 </div>
             </div>
         </div>
-         <br />
-        <br />
-        <br />
+        <br /><br /><br />
+        <asp:ImageButton ID="imgBack" runat="server" ImageUrl="~/Imagenes/backarrow.png" Height="50px" Width="50px" OnClick="imgBack_Click" />
         <fieldset>
       <legend>Payment</legend>
       <div class="form-group">
         <label class="col-sm-3 control-label" for="card-holder-name">Name on Card</label>
         <div class="col-sm-9">
             <asp:TextBox ID="txt_nombre" runat="server"></asp:TextBox>
-          <%--<input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name">--%>
         </div>
           <br />
       </div>
@@ -48,7 +46,6 @@
         <label class="col-sm-3 control-label" for="card-number">Card Number</label>
         <div class="col-sm-9">
             <asp:TextBox ID="txt_numTarjeta" runat="server"></asp:TextBox>
-          <%--<input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">--%>
         </div>
           <br />
       </div>
@@ -89,16 +86,14 @@
           </div>
         </div>
       </div>
-      <br />
-             <br />
+      <br /><br />
       <div class="form-group">
         <label class="col-sm-3 col-md-3 col-lg-3 control-label" >Card CVV</label>
         <div class="col-sm-3 col-md-6 col-lg-6">
             <asp:TextBox ID="txt_ccv" runat="server"></asp:TextBox>
         </div>
       </div>
-            <br />
-             <br />
+      <br /><br />
       <div class="form-group">
         <div class="col-sm-offset-3 col-sm-12 col-md-12">
             <asp:Button ID="btn_confirmarPago" runat="server" Text="Realizar Pago" ForeColor="#6699FF" BackColor="#CCFFFF" />

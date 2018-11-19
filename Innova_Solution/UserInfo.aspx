@@ -65,22 +65,13 @@
                         <td>8888-8888
                         </td>
                         </tr>
-                        <tr>
-                        <td>Phone Number</td>
-                        <td>8888-8888
-                        </td>
-                        </tr>
-
-                     
                     </tbody>
                   </table>
-                  
                   <a href="Payment.aspx" class="btn btn-primary">Premium</a>
                   <a href="#" class="btn btn-primary">Guardar Cambios</a>
                 </div>
         </div>
         
-
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

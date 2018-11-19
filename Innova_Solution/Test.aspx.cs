@@ -11,4 +11,9 @@ public partial class Test : System.Web.UI.Page
     {
 
     }
+
+    protected void imgBack_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Accreditation.aspx");
+    }
 }
