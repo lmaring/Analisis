@@ -6,7 +6,7 @@
 <head runat="server">
     <link href="resources/css/estilos.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <title>P ago de premium</title>
+    <title>Pago de premium</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -31,64 +31,72 @@
                 </div>
             </div>
         </div>
-         
+        <br /><br /><br />
+        <asp:ImageButton ID="imgBack" runat="server" ImageUrl="~/Imagenes/backarrow.png" Height="50px" Width="50px" OnClick="imgBack_Click" />
         <fieldset>
       <legend>Payment</legend>
       <div class="form-group">
         <label class="col-sm-3 control-label" for="card-holder-name">Name on Card</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name">
+            <asp:TextBox ID="txt_nombre" runat="server"></asp:TextBox>
         </div>
+          <br />
       </div>
       <div class="form-group">
         <label class="col-sm-3 control-label" for="card-number">Card Number</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">
+            <asp:TextBox ID="txt_numTarjeta" runat="server"></asp:TextBox>
         </div>
+          <br />
       </div>
       <div class="form-group">
         <label class="col-sm-3 control-label" for="expiry-month">Expiration Date</label>
         <div class="col-sm-9">
           <div class="row">
             <div class="col-xs-3">
-              <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
-                <option>Month</option>
-                <option value="01">Jan (01)</option>
-                <option value="02">Feb (02)</option>
-                <option value="03">Mar (03)</option>
-                <option value="04">Apr (04)</option>
-                <option value="05">May (05)</option>
-                <option value="06">June (06)</option>
-                <option value="07">July (07)</option>
-                <option value="08">Aug (08)</option>
-                <option value="09">Sep (09)</option>
-                <option value="10">Oct (10)</option>
-                <option value="11">Nov (11)</option>
-                <option value="12">Dec (12)</option>
-              </select>
+                <asp:DropDownList ID="ddl_mes" runat="server">
+                    <asp:ListItem Selected="True" Value=""> Month </asp:ListItem>
+                    <asp:ListItem Value="1"> Jan </asp:ListItem>
+                    <asp:ListItem Value="2"> Feb </asp:ListItem>
+                    <asp:ListItem Value="3"> Mar </asp:ListItem>
+                    <asp:ListItem Value="4"> Apr </asp:ListItem>
+                    <asp:ListItem Value="5"> May </asp:ListItem>
+                    <asp:ListItem Value="6"> June </asp:ListItem>
+                    <asp:ListItem Value="7"> July </asp:ListItem>
+                    <asp:ListItem Value="8"> Aug </asp:ListItem>
+                    <asp:ListItem Value="9"> Sep </asp:ListItem>
+                    <asp:ListItem Value="10"> Oct </asp:ListItem>
+                    <asp:ListItem Value="11"> Nov </asp:ListItem>
+                    <asp:ListItem Value="12"> Dec </asp:ListItem>
+                </asp:DropDownList>
             </div>
             <div class="col-xs-3">
-              <select class="form-control" name="expiry-year">
-                <option value="18">2018</option>
-                <option value="19">2019</option>
-                <option value="20">2020</option>
-                <option value="21">2021</option>
-                <option value="22">2022</option>
-                <option value="23">2023</option>
-              </select>
+                <asp:DropDownList ID="ddl_anho" runat="server">
+                    <asp:ListItem Selected="True" Value=""> Year </asp:ListItem>
+                    <asp:ListItem Value="18"> 18 </asp:ListItem>
+                    <asp:ListItem Value="19"> 19 </asp:ListItem>
+                    <asp:ListItem Value="20"> 20 </asp:ListItem>
+                    <asp:ListItem Value="21"> 21 </asp:ListItem>
+                    <asp:ListItem Value="22"> 22 </asp:ListItem>
+                    <asp:ListItem Value="23"> 23 </asp:ListItem>
+                    <asp:ListItem Value="24"> 24 </asp:ListItem>
+                    <asp:ListItem Value="25"> 25 </asp:ListItem>
+                </asp:DropDownList>
             </div>
           </div>
         </div>
       </div>
+      <br /><br />
       <div class="form-group">
-        <label class="col-sm-3 control-label" for="cvv">Card CVV</label>
-        <div class="col-sm-3">
-          <input type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code">
+        <label class="col-sm-3 col-md-3 col-lg-3 control-label" >Card CVV</label>
+        <div class="col-sm-3 col-md-6 col-lg-6">
+            <asp:TextBox ID="txt_ccv" runat="server"></asp:TextBox>
         </div>
       </div>
+      <br /><br />
       <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-9">
-          <button type="button" class="btn btn-success">Pay Now</button>
+        <div class="col-sm-offset-3 col-sm-12 col-md-12">
+            <asp:Button ID="btn_confirmarPago" runat="server" Text="Realizar Pago" ForeColor="#6699FF" BackColor="#CCFFFF" />
         </div>
       </div>
     </fieldset>

@@ -11,4 +11,9 @@ public partial class Payment : System.Web.UI.Page
     {
 
     }
+
+    protected void imgBack_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("UserInfo.aspx");
+    }
 }

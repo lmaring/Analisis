@@ -49,32 +49,29 @@
                         <td>**********</td>
                       </tr>
                       <tr>
-                        <td>Date of Birth</td>
-                        <td>01/24/1988</td>
-                      </tr>
-                        <tr>
-                        <td>Gender</td>
-                        <td>Female</td>
-                        </tr>
-                        <tr>
                         <td>Email</td>
                         <td><a href="mailto:info@support.com">info@support.com</a></td>
+                      </tr>
+                        <tr>
+                        <td>Profesion</td>
+                        <td>Pastor Evangelico</td>
+                        </tr>
+                        <tr>
+                        <td>Vivienda</td>
+                        <td>San Jose</td>
                         </tr>
                         <tr>
                         <td>Phone Number</td>
-                        <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
+                        <td>8888-8888
                         </td>
                         </tr>
-                     
                     </tbody>
                   </table>
-                  
-                  <a href="#" class="btn btn-primary">Premium</a>
+                  <a href="Payment.aspx" class="btn btn-primary">Premium</a>
                   <a href="#" class="btn btn-primary">Guardar Cambios</a>
                 </div>
         </div>
         
-
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
