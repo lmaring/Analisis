@@ -38,35 +38,35 @@
             <br />
             <h1>Ajuste de Usuario</h1> 
             <div class=" col-md-9 col-lg-9 "> 
-                  <table class="table table-user-information">
+                  <table  class="table table-user-information">
                     <tbody>
                       <tr>
                         <td>Usuario:</td>
                           <asp:Label ID="lbl_User" runat="server" Text=""></asp:Label>
-                      </tr>
-                      <tr>
+                        </tr>
+                        <tr>
                         <td>Contraseña:</td>
-                        <asp:Label ID="lbl_Pass" runat="server" Text="******"></asp:Label>
-                      </tr>
-                      <tr>
+                        <td><asp:Label ID="lbl_Pass" runat="server" Text="******"></asp:Label></td>
+                        </tr>
+                        <tr>
                         <td>Email</td>
-                        <asp:Label ID="lbl_correo" runat="server" Text="info@support.com"></asp:Label>
-                      </tr>
+                        <td><asp:Label ID="lbl_correo" runat="server" Text="info@support.com"></asp:Label></td>
+                        </tr>
                         <tr>
                         <td>Profesion</td>
-                        <asp:Label ID="lbl_profesion" runat="server" Text="Pastor Evangelico"></asp:Label>
+                        <td><asp:Label ID="lbl_profesion" runat="server" Text="Pastor Evangelico"></asp:Label></td>                        
                         </tr>
                         <tr>
                         <td>Vivienda</td>
-                        <asp:Label ID="lblVivienda" runat="server" Text="Moravia Miedo"></asp:Label>
+                        <td><asp:Label ID="lblVivienda" runat="server" Text="Moravia Miedo"></asp:Label></td>
                         </tr>
                         <tr>
                         <td>Phone Number</td>
-                        <asp:Label ID="lbl_telefono" runat="server" Text="8888-8888"></asp:Label>
+                            <td><asp:Label ID="lbl_telefono" runat="server" Text="8888-8888"></asp:Label></td>
                         </tr>
                         <tr>
                         <td>Tipo de Cuenta</td>
-                        <asp:Label ID="lbl_TipoCuenta" runat="server" Text="-"></asp:Label>
+                        <td><asp:Label ID="lbl_TipoCuenta" runat="server" Text="-"></asp:Label></td>
                         </tr>
                     </tbody>
                   </table>
