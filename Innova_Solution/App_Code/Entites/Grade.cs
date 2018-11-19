@@ -6,6 +6,7 @@ using System.Web;
 /// <summary>
 /// Summary description for Grade
 /// </summary>
+/// 
 public class Grade
 {
     public int idStudent { get; set; }

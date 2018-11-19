@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class Accreditation : System.Web.UI.Page
 {
+
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -16,7 +17,6 @@ public partial class Accreditation : System.Web.UI.Page
     {
         Response.Redirect("Test.aspx");
     }
-
     protected void btn_ITIL_Click(object sender, EventArgs e)
     {
         if(btn_ITIL.Text == "Matricular")
