@@ -11,4 +11,9 @@ public partial class Accreditation : System.Web.UI.Page
     {
 
     }
+
+    protected void btn_quizScrum_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Test.aspx");
+    }
 }
