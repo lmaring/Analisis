@@ -16,4 +16,14 @@ public partial class Payment : System.Web.UI.Page
     {
         Response.Redirect("UserInfo.aspx");
     }
+
+    protected void btn_cancelar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Accreditation.aspx");
+    }
+
+    protected void btn_pagar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Accreditation.aspx");
+    }
 }
