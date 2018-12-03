@@ -40,7 +40,8 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3><span class="label label-warning" id="qid">Enunciado:</span> Pregunta.</h3>
+                            <h3><span class="label label-warning" id="qid">Enunciado:</span></h3>
+                            <asp:TextBox ID="txtEnunciado" CssClass="input" runat="server" Height="100" Width="500"></asp:TextBox>
                             <br />
                         </div>
                     <div class="modal-body">
@@ -51,7 +52,7 @@
                                 <div class="blockG" id="rotateG_03"></div>
                                 <div class="blockG" id="rotateG_04"></div> 
                             </div>
-                            Respuestas?</div>
+                        </div>
 
                         <div class="quiz" id="quiz">
                             <br />
@@ -68,6 +69,8 @@
                             <asp:TextBox ID="txt_resp4" Text="" runat="server"></asp:TextBox>
                             <br />
                         </div>
+                        <br />
+                        <asp:Button ID="btn_guardarPregunta" runat="server" Text="Guardar pregunta" />
                       </div>
                 <div class="modal-footer text-muted">
                     <span id="answer"></span>

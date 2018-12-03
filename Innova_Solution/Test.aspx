@@ -34,7 +34,7 @@
         </div><!--Final del navbar-->
         <br /><br />
         <div>           
-    <div class="container-fluid bg-info">
+        <div class="container-fluid bg-info">
     <br />
          <asp:ImageButton ID="imgBack" runat="server" ImageUrl="~/Imagenes/backarrow.png" Height="50px" OnClick="imgBack_Click" Width="50px" />    
      <div class="modal-dialog">
@@ -51,7 +51,7 @@
                   <div class="blockG" id="rotateG_04"></div>
               </div>
           </div>
-
+            <asp:Image ID="img" runat="server" ImageUrl="https://4.imimg.com/data4/NL/KX/MY-17786222/networking-solution-500x500.jpg" Height="500" Width="500" />
           <div class="quiz" id="quiz" data-toggle="buttons">
            <label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><asp:RadioButton ID="rd_resp1" runat="server" value="1" ValidationGroup="RadioAnswers" />1</label>
            <label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><asp:RadioButton ID="rd_resp2" runat="server" value="2"  ValidationGroup="RadioAnswers" />2</label>

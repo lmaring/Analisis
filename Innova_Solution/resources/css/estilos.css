@@ -72,19 +72,19 @@
     padding-bottom: 112px;
 }
 
-.credit-card-div span {
-    padding-top: 10px;
+.panel-pago{
+    width:700px;
+    height:350px;
+    border: 1px solid grey;
+    box-sizing: border-box;
 }
 
-.credit-card-div img {
-    padding-top: 30px;
+.auto-style1 {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    width: 16.66666667%;
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 15px;
 }
-
-.credit-card-div .small-font {
-    font-size: 9px;
-}
-
-.credit-card-div .pad-adjust {
-    padding-top: 10px;
-}
-
