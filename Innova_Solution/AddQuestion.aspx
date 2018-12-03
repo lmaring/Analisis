@@ -60,7 +60,7 @@
                     <div class="quiz" id="quiz">
                         <br />
                         <asp:RadioButton ID="rd_btn1" Text=" " runat="server" GroupName="GN_Respuestas" />
-                        <asp:TextBox ID="txt_resp1" Text="" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_resp1" Text="" runat="server" Width="250"></asp:TextBox>
                         <br />
                         <asp:RadioButton ID="rd_btn2" Text=" " runat="server" GroupName="GN_Respuestas" />
                         <asp:TextBox ID="txt_resp2" Text="" runat="server"></asp:TextBox>
