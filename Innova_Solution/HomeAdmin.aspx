@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="HomeUser.aspx.cs" Inherits="HomeUser" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="HomeAdmin.aspx.cs" Inherits="HomeAdmin" %>
+
 
 
 <!DOCTYPE html>
@@ -39,8 +40,8 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="HomeUser.aspx">Menu Principal</a></li>
-                        <li><a href="Accreditation.aspx">Acreditaciones</a></li>
+                        <li class="active"><a href="HomeAdmin.aspx">Menu Principal</a></li>
+                        <li><a href="AddAccreditation.aspx">Acreditaciones</a></li>
                         <li><a href="UserInfo.aspx">Ajuste Cuenta</a></li>
                         <li><a href="Index.aspx">Salir</a></li>
                     </ul>
@@ -70,4 +71,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>
-   

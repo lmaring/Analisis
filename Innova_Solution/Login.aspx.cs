@@ -21,6 +21,11 @@ public partial class Login : System.Web.UI.Page
         User existe = userServices.Login(nameUser, passwordUser);
         if (existe != null)
         {
+            Session["User"] = existe;
+            if (existe.UserName.Equals( "Admin"))
+            {
+                Response.Redirect("HomeAdmin.aspx");
+            }
             Response.Redirect("HomeUser.aspx");
 
         }

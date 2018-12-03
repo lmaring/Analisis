@@ -6,7 +6,135 @@
 <head runat="server">
     <link href="resources/css/estilos.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <title>P ago de premium</title>
+    <title>Pago de premium</title>
+    <script type="text/javascript">
+
+        $cc.validate = function (e) {
+
+            //if the input is empty reset the indicators to their default classes
+            if (e.target.value == '') {
+                e.target.previousElementSibling.className = 'card-type';
+                e.target.nextElementSibling.className = 'card-valid';
+                return
+            }
+
+            //Retrieve the value of the input and remove all non-number characters
+            var number = String(e.target.value);
+            var cleanNumber = '';
+            for (var i = 0; i < number.length; i++) {
+                if (/^[0-9]+$/.test(number.charAt(i))) {
+                    cleanNumber += number.charAt(i);
+                }
+            }
+
+            //Only parse and correct the input value if the key pressed isn't backspace.
+            if (e.key != 'Backspace') {
+                //Format the value to include spaces in the correct locations
+                var formatNumber = '';
+                for (var i = 0; i < cleanNumber.length; i++) {
+                    if (i == 3 || i == 7 || i == 11) {
+                        formatNumber = formatNumber + cleanNumber.charAt(i) + ' '
+                    } else {
+                        formatNumber += cleanNumber.charAt(i)
+                    }
+                }
+                e.target.value = formatNumber;
+            }
+
+            //run the Luhn algorithm on the number if it is at least equal to the shortest card length
+            if (cleanNumber.length >= 12) {
+                var isLuhn = luhn(cleanNumber);
+            }
+
+            function luhn(number) {
+                var numberArray = number.split('').reverse();
+                for (var i = 0; i < numberArray.length; i++) {
+                    if (i % 2 != 0) {
+                        numberArray[i] = numberArray[i] * 2;
+                        if (numberArray[i] > 9) {
+                            numberArray[i] = parseInt(String(numberArray[i]).charAt(0)) + parseInt(String(numberArray[i]).charAt(1))
+                        }
+                    }
+                }
+
+                var sum = 0;
+                for (var i = 1; i < numberArray.length; i++) {
+                    sum += parseInt(numberArray[i]);
+                }
+                sum = sum * 9 % 10;
+                if (numberArray[0] == sum) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+        };
+	
+	function nombreVacio(nombre){
+		if(nombre == ""){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+    function luhn(number) {
+        var numberArray = number.split('').reverse();
+        for (var i = 0; i < numberArray.length; i++) {
+            if (i % 2 != 0) {
+                numberArray[i] = numberArray[i] * 2;
+                if (numberArray[i] > 9) {
+                    numberArray[i] = parseInt(String(numberArray[i]).charAt(0)) + parseInt(String(numberArray[i]).charAt(1))
+                }
+            }
+        }
+
+        var sum = 0;
+        for (var i = 1; i < numberArray.length; i++) {
+            sum += parseInt(numberArray[i]);
+        }
+        sum = sum * 9 % 10;
+        if (numberArray[0] == sum) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    function codigoSeguridad(ccv) {
+        var correcto = true;
+        var regNumeros = /^d+$/;
+
+        if (ccv.length != 3 || !ccv.regNumeros || ccv == null) 
+            correcto = false;
+
+        return correcto;
+    }
+	
+    function revisarValidezCampos(){
+        var nombre = document.getElementById('<%=txt_nombre.ClientID%>').value;
+        var tarjeta = document.getElementById('<%=txt_numero.ClientID%>').value;
+        var ccv = document.getElementById('<%=txt_ccv.ClientID%>').value;
+        var mes = document.getElementById('<%=ddl_mes%>').value;
+        var anho = document.getElementById('<%=ddl_anho%>').value;
+
+
+        if (nombreVacio(nombre)) {
+            alert("Debe llenar el campo del nombre");
+        } else if (luhn(tarjeta) || tarjeta == "") {
+            alert("Número invalido para el campo de tarjeta");
+        } else if (codigoSeguridad(cvv)) {
+            alert("Número de seguridad invalido");
+        } else if (mes == "Mes"){
+            aler("Ingrese un mes");
+        } else if (anho == "Año"){
+            alert("Ingrese un año")
+        } else {
+            alert("El pago se ha hecho efectivamente");
+        }
+	}
+
+</script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -24,79 +152,84 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="MenuPrincipal.aspx">Menu Principal</a></li>
-                        <li><a href="Acreditaciones.aspx">Acreditaciones</a></li>
-                        <li><a href="AjusteUsuario.aspx">Ajuste Cuenta</a></li>
+                        <li><a href="HomeUser.aspx">Menu Principal</a></li>
+                        <li><a href="Accreditation.aspx">Acreditaciones</a></li>
+                        <li class="active"><a href="UserInfo.aspx">Ajuste Cuenta</a></li>
+                        <li><a href="Index.aspx">Salir</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
-         
-        <fieldset>
-      <legend>Payment</legend>
-      <div class="form-group">
-        <label class="col-sm-3 control-label" for="card-holder-name">Name on Card</label>
-        <div class="col-sm-9">
-          <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name">
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-3 control-label" for="card-number">Card Number</label>
-        <div class="col-sm-9">
-          <input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-3 control-label" for="expiry-month">Expiration Date</label>
-        <div class="col-sm-9">
-          <div class="row">
-            <div class="col-xs-3">
-              <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
-                <option>Month</option>
-                <option value="01">Jan (01)</option>
-                <option value="02">Feb (02)</option>
-                <option value="03">Mar (03)</option>
-                <option value="04">Apr (04)</option>
-                <option value="05">May (05)</option>
-                <option value="06">June (06)</option>
-                <option value="07">July (07)</option>
-                <option value="08">Aug (08)</option>
-                <option value="09">Sep (09)</option>
-                <option value="10">Oct (10)</option>
-                <option value="11">Nov (11)</option>
-                <option value="12">Dec (12)</option>
-              </select>
+        </div> <!--Se termina el navbar-->
+        <br /><br />
+        <div class="container-fluid bg-info" >
+            <br />
+            <div class="panel-pago" >
+                <div class="panel-heading" >
+                    <div class="row ">
+                        <h2 align="center" font-weight="bold">Pago</h2>
+                        <br />
+                        <div class="col-md-4">
+                            <asp:TextBox ID="txt_numero" class="form-control" runat="server" placeholder="Número de la tarjeta"></asp:TextBox>
+                        </div>
+                        <div class="col-md-4">
+                            <asp:TextBox ID="txt_nombre" class="form-control" runat="server" placeholder="Nombre en la tarjeta"></asp:TextBox>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row ">
+                        <div class="col-lg-5 col-md-5 col-sm-3 col-xs-3">
+                            <span class="help-block text-muted small-font" >Mes de expiración</span>
+                            <asp:DropDownList ID="ddl_mes" runat="server">
+                            <asp:ListItem Selected="True" Value=""> Mes </asp:ListItem>
+                            <asp:ListItem Value="1"> Ene </asp:ListItem>
+                            <asp:ListItem Value="2"> Feb </asp:ListItem>
+                            <asp:ListItem Value="3"> Mar </asp:ListItem>
+                            <asp:ListItem Value="4"> Abr </asp:ListItem>
+                            <asp:ListItem Value="5"> May </asp:ListItem>
+                            <asp:ListItem Value="6"> Jun </asp:ListItem>
+                            <asp:ListItem Value="7"> Jul </asp:ListItem>
+                            <asp:ListItem Value="8"> Aug </asp:ListItem>
+                            <asp:ListItem Value="9"> Sep </asp:ListItem>
+                            <asp:ListItem Value="10"> Oct </asp:ListItem>
+                            <asp:ListItem Value="11"> Nov </asp:ListItem>
+                            <asp:ListItem Value="12"> Dec </asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-3 col-xs-3">
+                            <span class="help-block text-muted small-font" >Año de expiración</span>
+                            <asp:DropDownList ID="ddl_anho" runat="server">
+                            <asp:ListItem Selected="True" Value=""> Año </asp:ListItem>
+                            <asp:ListItem Value="18"> 18 </asp:ListItem>
+                            <asp:ListItem Value="19"> 19 </asp:ListItem>
+                            <asp:ListItem Value="20"> 20 </asp:ListItem>
+                            <asp:ListItem Value="21"> 21 </asp:ListItem>
+                            <asp:ListItem Value="22"> 22 </asp:ListItem>
+                            <asp:ListItem Value="23"> 23 </asp:ListItem>
+                            <asp:ListItem Value="24"> 24 </asp:ListItem>
+                            <asp:ListItem Value="25"> 25 </asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="auto-style1">
+                        <asp:TextBox ID="txt_ccv" class="form-control" runat="server" placeholder="CCV"></asp:TextBox>
+                    </div>
+                    <br /><br /><br />
+                    <asp:Label ID="lbl_Error" runat="server" Text="" ForeColor="Red"></asp:Label>
+                    <div class="row ">
+                        <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
+                            <asp:Button ID="btn_cancelar" CssClass="btn btn-danger"  runat="server" Text="Cancelar" OnClick="btn_cancelar_Click" />
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
+                            <asp:Button ID="btn_pagar" CssClass="btn btn-primary"  runat="server" Text="Pagar" OnClientClick="revisarValidezCampos();"  />
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-xs-3">
-              <select class="form-control" name="expiry-year">
-                <option value="18">2018</option>
-                <option value="19">2019</option>
-                <option value="20">2020</option>
-                <option value="21">2021</option>
-                <option value="22">2022</option>
-                <option value="23">2023</option>
-              </select>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-3 control-label" for="cvv">Card CVV</label>
-        <div class="col-sm-3">
-          <input type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code">
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-9">
-          <button type="button" class="btn btn-success">Pay Now</button>
-        </div>
-      </div>
-    </fieldset>
     </form>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
 </body>
 </html>

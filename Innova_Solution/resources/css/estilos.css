@@ -71,3 +71,20 @@
 .p-b-112 {
     padding-bottom: 112px;
 }
+
+.panel-pago{
+    width:700px;
+    height:350px;
+    border: 1px solid grey;
+    box-sizing: border-box;
+}
+
+.auto-style1 {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    width: 16.66666667%;
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 15px;
+}

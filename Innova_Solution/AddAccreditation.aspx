@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Accreditation.aspx.cs" Inherits="Accreditation" %>
-
-<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddAccreditation.aspx.cs" Inherits="AddAccreditation" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -50,20 +48,20 @@
               <tr>
                 <th scope="row">1</th>
                 <td>SCRUM</td>
-                <td>Matriculado</td>
-                <td><asp:Button ID="btn_Scrum" runat="server" Text="Realizar quiz" OnClick="btn_quizScrum_Click" /></td>
+                <td>-</td>
+                <td><asp:Button ID="btn_Scrum" runat="server" Text="Crear" OnClick="btn_quizScrum_Click" /></td>
               </tr>
               <tr>
                 <th scope="row">2</th>
                 <td>ITIL</td>
                 <td>-</td>
-                <td><asp:Button ID="btn_ITIL" runat="server" Text="Matricular" OnClick="btn_ITIL_Click" /></td>
+                <td><asp:Button ID="btn_ITIL" runat="server" Text="Crear" OnClick="btn_ITIL_Click" /></td>
               </tr>
               <tr>
                 <th scope="row">3</th>
                 <td>CCNA</td>
                 <td>-</td>
-                <td><asp:Button ID="btn_CCNA" runat="server" Text="Matricular" /></td>
+                <td><asp:Button ID="btn_CCNA" runat="server" Text="Crear" OnClick="btn_CCNA_Click" /></td>
               </tr>
             </tbody>
         </table>

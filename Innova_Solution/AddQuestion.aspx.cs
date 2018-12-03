@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Test : System.Web.UI.Page
+public partial class AddQuestion : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -14,6 +14,6 @@ public partial class Test : System.Web.UI.Page
 
     protected void imgBack_Click(object sender, ImageClickEventArgs e)
     {
-        Response.Redirect("Accreditation.aspx");
+        Response.Redirect("AddAccreditation.aspx");
     }
 }
