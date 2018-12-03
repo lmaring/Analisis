@@ -39,12 +39,11 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h3><span class="label label-warning" id="qid">Enunciado:</span></h3>
-                        <asp:TextBox ID="txtEnunciado" CssClass="input" runat="server" Height="100" Width="500"></asp:TextBox>
+                        <asp:TextBox ID="txtEnunciado" CssClass="input" runat="server" Height="100" Width="565"></asp:TextBox>
                         <br /><br />
                         <asp:FileUpload ID="FU_imagenPregunta" accept=".jpg" runat="server" CssClass="form-control" Visible="True" />
                         <br />
-                        <asp:Button ID="btnGuardarImagen" runat="server" Text="Buscar Imagen" CssClass="btn btn-success" Visible="True" />
-                        <br />
+                        <asp:Button ID="btnGuardarImagen" runat="server" Text="Buscar Imagen" CssClass="btn btn-primary" Visible="True" />
                         <asp:Image ID="img_Preview" runat="server" />
                         </div>
                     <div class="modal-body">
@@ -56,24 +55,23 @@
                                 <div class="blockG" id="rotateG_04"></div> 
                             </div>
                         </div>
-
                     <div class="quiz" id="quiz">
                         <br />
                         <asp:RadioButton ID="rd_btn1" Text=" " runat="server" GroupName="GN_Respuestas" />
-                        <asp:TextBox ID="txt_resp1" Text="" runat="server" Width="250"></asp:TextBox>
-                        <br />
+                        <asp:TextBox ID="txt_resp1" Text="" runat="server" Width="350"></asp:TextBox>
+                        <br /><br />
                         <asp:RadioButton ID="rd_btn2" Text=" " runat="server" GroupName="GN_Respuestas" />
-                        <asp:TextBox ID="txt_resp2" Text="" runat="server"></asp:TextBox>
-                        <br />
+                        <asp:TextBox ID="txt_resp2" Text="" runat="server"  Width="350"></asp:TextBox>
+                        <br /><br />
                         <asp:RadioButton ID="rd_btn3" Text=" " runat="server" GroupName="GN_Respuestas" />
-                        <asp:TextBox ID="txt_resp3" Text="" runat="server"></asp:TextBox>
-                        <br />
+                        <asp:TextBox ID="txt_resp3" Text="" runat="server" Width="350"></asp:TextBox>
+                        <br /><br />
                         <asp:RadioButton ID="rd_btn4" Text=" " runat="server" GroupName="GN_Respuestas" />
-                        <asp:TextBox ID="txt_resp4" Text="" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_resp4" Text="" runat="server" Width="350"></asp:TextBox>
                         <br />
                     </div>
                     <br />
-                    <asp:Button ID="btn_guardarPregunta" runat="server" Text="Guardar pregunta" />
+                    <asp:Button ID="btn_guardarPregunta" runat="server" CssClass="btn btn-success" Text="Guardar pregunta" />
                 </div>
                 <div class="modal-footer text-muted">
                     <span id="answer"></span>
