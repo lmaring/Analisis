@@ -34,38 +34,38 @@
         </div><!--Final del navbar-->
         <br /><br />
         <div>           
-        <div class="container-fluid bg-info">
-    <br />
-         <asp:ImageButton ID="imgBack" runat="server" ImageUrl="~/Imagenes/backarrow.png" Height="50px" OnClick="imgBack_Click" Width="50px" />    
-     <div class="modal-dialog">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h3><span class="label label-warning" id="qid">1</span> Titulo de la pregunta</h3>
+            <div class="container-fluid bg-info">
+                 <br />
+                 <asp:ImageButton ID="imgBack" runat="server" ImageUrl="~/Imagenes/backarrow.png" Height="50px" OnClick="imgBack_Click" Width="50px" />    
+                 <div class="modal-dialog">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                            <h3><span class="label label-warning" id="qid">1</span> Titulo de la pregunta</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-xs-3 col-xs-offset-5">
+                                <div id="loadbar" style="display: none;">
+                                <div class="blockG" id="rotateG_01"></div>
+                                <div class="blockG" id="rotateG_02"></div>
+                                <div class="blockG" id="rotateG_03"></div>
+                                <div class="blockG" id="rotateG_04"></div>
+                           </div>
+                        </div>
+                        <asp:Image ID="img" runat="server" ImageUrl="https://4.imimg.com/data4/NL/KX/MY-17786222/networking-solution-500x500.jpg" Height="500" Width="500" />
+                    <div class="quiz" id="quiz" data-toggle="buttons">
+                        <label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><asp:RadioButton ID="rd_resp1" runat="server" value="1" ValidationGroup="RadioAnswers" />1</label>
+                        <label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><asp:RadioButton ID="rd_resp2" runat="server" value="2"  ValidationGroup="RadioAnswers" />2</label>
+                        <label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><asp:RadioButton ID="rd_resp3" runat="server" value="3"  ValidationGroup="RadioAnswers" />3</label>
+                        <label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><asp:RadioButton ID="rd_resp4" runat="server" value="4"  ValidationGroup="RadioAnswers" />4</label>
+                    </div>
+                </div>
+                <div class="modal-footer text-muted">
+                    <span id="answer"></span>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            <div class="col-xs-3 col-xs-offset-5">
-               <div id="loadbar" style="display: none;">
-                  <div class="blockG" id="rotateG_01"></div>
-                  <div class="blockG" id="rotateG_02"></div>
-                  <div class="blockG" id="rotateG_03"></div>
-                  <div class="blockG" id="rotateG_04"></div>
-              </div>
-          </div>
-            <asp:Image ID="img" runat="server" ImageUrl="https://4.imimg.com/data4/NL/KX/MY-17786222/networking-solution-500x500.jpg" Height="500" Width="500" />
-          <div class="quiz" id="quiz" data-toggle="buttons">
-           <label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><asp:RadioButton ID="rd_resp1" runat="server" value="1" ValidationGroup="RadioAnswers" />1</label>
-           <label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><asp:RadioButton ID="rd_resp2" runat="server" value="2"  ValidationGroup="RadioAnswers" />2</label>
-           <label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><asp:RadioButton ID="rd_resp3" runat="server" value="3"  ValidationGroup="RadioAnswers" />3</label>
-           <label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><asp:RadioButton ID="rd_resp4" runat="server" value="4"  ValidationGroup="RadioAnswers" />4</label>
-         </div>
-   </div>
-   <div class="modal-footer text-muted">
-    <span id="answer"></span>
-</div>
-</div>
-</div>
-</div>
-        </div>
+    </div>
+ </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
