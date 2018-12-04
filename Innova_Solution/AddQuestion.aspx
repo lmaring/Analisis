@@ -73,7 +73,7 @@
                         <br />
                     </div>
                     <br />
-                    <asp:Button ID="btn_guardarPregunta" runat="server" Text="Guardar pregunta" />
+                    <asp:Button ID="btn_guardarPregunta" runat="server" Text="Guardar pregunta" OnClick="btn_guardarPregunta_Click" />
                 </div>
                 <div class="modal-footer text-muted">
                     <span id="answer"></span>
