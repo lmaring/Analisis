@@ -24,7 +24,6 @@ public partial class AddQuestion : System.Web.UI.Page
     {
         aux.addPregunta(txtEnunciado.Text);
 
-
   
     }
 
