@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 
 public partial class AddQuestion : System.Web.UI.Page
 {
+
+    TestServices aux = new TestServices();
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -16,4 +18,11 @@ public partial class AddQuestion : System.Web.UI.Page
     {
         Response.Redirect("AddAccreditation.aspx");
     }
+    protected void btn_guardarPregunta_Click(object sender, EventArgs e)
+    {
+        aux.addPregunta(txtEnunciado.Text);
+
+  
+    }
+
 }

@@ -118,10 +118,6 @@
         var mes = document.getElementById('<%=ddl_mes%>').value;
         var anho = document.getElementById('<%=ddl_anho%>').value;
 
-        //if (mes === "Mes") {
-        //    alert("Ingrese un mes valido");
-        //}
-
         if (nombreVacio(nombre)) {
             alert("Debe llenar el campo del nombre");
         } else if (luhn(tarjeta) || tarjeta == "") {
