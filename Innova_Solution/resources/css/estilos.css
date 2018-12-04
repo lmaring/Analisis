@@ -2,6 +2,30 @@
     text-align: center;
 }
 
+#qid {
+    padding: 10px 15px 1px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 20px;
+    color: white;
+    background-color: #F4743B;
+}
+
+.txtAgregarPregunta {
+    min-height: 80px;
+    max-height: 120px;
+    max-width: 85%;
+    min-width: 85%;
+}
+
+.txtEnunciado {
+    min-height: 80px;
+    max-height: 150px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+
 .contenedor {
     width: 30% !important;
     margin-top: 13% ;
