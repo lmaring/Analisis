@@ -41,6 +41,7 @@
                      <div class="modal-content">
                         <div class="modal-header">
                             <h3><span class="label label-warning" id="qid">1</span> Titulo de la pregunta</h3>
+                            <!--El numero tiene que irse incrementando-->
                         </div>
                         <div class="modal-body">
                             <div class="col-xs-3 col-xs-offset-5">

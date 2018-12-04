@@ -11,8 +11,18 @@
     background-color: #F4743B;
 }
 
-.btnAgregaPregunta {
-    
+.txtAgregarPregunta {
+    min-height: 80px;
+    max-height: 120px;
+    max-width: 85%;
+    min-width: 85%;
+}
+
+.txtEnunciado {
+    min-height: 80px;
+    max-height: 150px;
+    max-width: 100%;
+    min-width: 100%;
 }
 
 
