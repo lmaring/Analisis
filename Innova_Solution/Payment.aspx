@@ -118,6 +118,9 @@
         var mes = document.getElementById('<%=ddl_mes%>').value;
         var anho = document.getElementById('<%=ddl_anho%>').value;
 
+        //if (mes === "Mes") {
+        //    alert("Ingrese un mes valido");
+        //}
 
         if (nombreVacio(nombre)) {
             alert("Debe llenar el campo del nombre");
@@ -180,7 +183,7 @@
                         <div class="col-lg-5 col-md-5 col-sm-3 col-xs-3">
                             <span class="help-block text-muted small-font" >Mes de expiración</span>
                             <asp:DropDownList ID="ddl_mes" runat="server">
-                            <asp:ListItem Selected="True" Value=""> Mes </asp:ListItem>
+                            <asp:ListItem Selected="True" Value="" Text="Mes"></asp:ListItem>
                             <asp:ListItem Value="1"> Ene </asp:ListItem>
                             <asp:ListItem Value="2"> Feb </asp:ListItem>
                             <asp:ListItem Value="3"> Mar </asp:ListItem>
@@ -198,7 +201,7 @@
                         <div class="col-lg-5 col-md-5 col-sm-3 col-xs-3">
                             <span class="help-block text-muted small-font" >Año de expiración</span>
                             <asp:DropDownList ID="ddl_anho" runat="server">
-                            <asp:ListItem Selected="True" Value=""> Año </asp:ListItem>
+                            <asp:ListItem Selected="True" Value="" Text="Año"></asp:ListItem>
                             <asp:ListItem Value="18"> 18 </asp:ListItem>
                             <asp:ListItem Value="19"> 19 </asp:ListItem>
                             <asp:ListItem Value="20"> 20 </asp:ListItem>
