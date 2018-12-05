@@ -23,8 +23,34 @@ public partial class AddQuestion : System.Web.UI.Page
     protected void btn_guardarPregunta_Click(object sender, EventArgs e)
     {
         aux.addPregunta(txtEnunciado.Text);
-
-  
+        if (rd_btn1.Checked)
+        {
+            aux.addRespuesta(txt_resp1.Text, "C");
+            aux.addRespuesta(txt_resp2.Text, "I");
+            aux.addRespuesta(txt_resp3.Text, "I");
+            aux.addRespuesta(txt_resp4.Text, "I");
+        }
+        else if (rd_btn2.Checked)
+        {
+            aux.addRespuesta(txt_resp1.Text, "I");
+            aux.addRespuesta(txt_resp2.Text, "C");
+            aux.addRespuesta(txt_resp3.Text, "I");
+            aux.addRespuesta(txt_resp4.Text, "I");
+        }
+        else if (rd_btn3.Checked)
+        {
+            aux.addRespuesta(txt_resp1.Text, "I");
+            aux.addRespuesta(txt_resp2.Text, "I");
+            aux.addRespuesta(txt_resp3.Text, "C");
+            aux.addRespuesta(txt_resp4.Text, "I");
+        }
+        else if(rd_btn4.Checked)
+        {
+            aux.addRespuesta(txt_resp1.Text, "I");
+            aux.addRespuesta(txt_resp2.Text, "I");
+            aux.addRespuesta(txt_resp3.Text, "I");
+            aux.addRespuesta(txt_resp4.Text, "C");
+        }
     }
 
 }
