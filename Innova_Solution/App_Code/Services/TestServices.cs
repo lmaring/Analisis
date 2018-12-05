@@ -10,7 +10,6 @@ public class TestServices
 {
     SqlConnection conexion = new SqlConnection(stringConection());
 
-
     public static string stringConection()
     {
         SqlConnectionStringBuilder aux = new SqlConnectionStringBuilder();
@@ -30,8 +29,10 @@ public class TestServices
             String sql;
             SqlCommand com;
             conexion.Open();
-            sql = "insert into prueba(Id,Nombre) values("+CantPrueba()+",'"+ nombre+ "');";
+            sql = "insert into prueba(Id,Nombre) values(@Id,@Nombre);";
             com = conexion.CreateCommand();
+            com.Parameters.AddWithValue("Id",CantPrueba());
+            com.Parameters.AddWithValue("Nombre", nombre);
             com.CommandText = sql;
             com.ExecuteNonQuery();
 
@@ -50,16 +51,21 @@ public class TestServices
         conexion.Close();
         try
         {
+            int idPru = CantPrueba();
+            int id = CantPregunta()+1;
             String sql;
             SqlCommand com;
             conexion.Open();
             sql = "insert into pregunta(Id,IdPrueba,Pregunta) " +
-                "values("+CantPregunta()+","+CantPrueba()+",'"+pregunta+"');";
+                "values(@Id,@IdPrueba,@Pregunta);";
             com = conexion.CreateCommand();
+            com.Parameters.AddWithValue("Id", id);
+            com.Parameters.AddWithValue("IdPrueba",idPru);
+            com.Parameters.AddWithValue("Pregunta",pregunta);
             com.CommandText = sql;
             com.ExecuteNonQuery();
-            conexion.Close();
             crear = true;
+            conexion.Close();
         }
         catch (Exception e)
         {
@@ -67,24 +73,30 @@ public class TestServices
         }
         return crear;
     }
-    public bool addRespuesta(string respuesta,string tipo)
+    public bool addRespuesta(string respuesta,string Tipo)
     {
         bool crear = false;
         conexion.Close();
         try
         {
+            int id = CantRespuesta() + 1;
+            int idPregunta = CantPregunta();
             String sql;
             SqlCommand com;
             conexion.Open();
-            sql =" insert into respuesta(Id, IdPregunta, Tipo, Respuesta) " +
-                "values("+CantRespuesta()+","+CantPregunta()+",'"+tipo+"','"+respuesta+"'); ";
+            sql ="insert into respuesta(Id, IdPregunta, Tipo, Respuesta) " +
+                "values(@Id,@IdPregunta,@Tipo,@Respuesta); ";
             com = conexion.CreateCommand();
+            com.Parameters.AddWithValue("Id", id);
+            com.Parameters.AddWithValue("IdPregunta", idPregunta);
+            com.Parameters.AddWithValue("Tipo", Tipo);
+            com.Parameters.AddWithValue("Respuesta", respuesta);
             com.CommandText = sql;
             com.ExecuteNonQuery();
             conexion.Close();
             crear = true;
         }
-        catch (Exception e)
+         catch (Exception e)
         {
             crear = false;
         }
@@ -110,7 +122,7 @@ public class TestServices
 
             while (rs.Read())
             {
-                cant = Int32.Parse(rs[0].ToString()) + 1;
+                cant = Int32.Parse(rs[0].ToString());
             }
             conexion.Close();
 
@@ -140,7 +152,7 @@ public class TestServices
 
             while (rs.Read())
             {
-                cant = Int32.Parse(rs[0].ToString()) + 1;
+                cant = Int32.Parse(rs[0].ToString());
             }
             conexion.Close();
 
@@ -170,7 +182,7 @@ public class TestServices
 
             while (rs.Read())
             {
-                cant = Int32.Parse(rs[0].ToString()) + 1;
+                cant = Int32.Parse(rs[0].ToString());
             }
             conexion.Close();
 
