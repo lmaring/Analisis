@@ -42,6 +42,10 @@
                 <th>#</th>
                 <th>Nombre:</th>
                 <th>      </th>
+                   <th>     
+                       <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Add_Exam" />
+                       <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+                   </th>
               </tr>
             </thead>
             <tbody>
