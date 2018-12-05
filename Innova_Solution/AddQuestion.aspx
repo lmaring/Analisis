@@ -46,6 +46,10 @@
                         <asp:Button ID="btnGuardarImagen" runat="server" Text="Buscar Imagen" CssClass="btn btn-primary" Visible="True" />
                         <asp:Image ID="img_Preview" runat="server" />
                         </div>
+                    <div>
+                        <asp:Label ID="lbl_tipo" runat="server" Text="Categoría"></asp:Label>
+                        <asp:TextBox ID="txt_categoria" runat="server"></asp:TextBox>
+                    </div>
                     <div class="modal-body">
                         <div class="col-xs-3 col-xs-offset-5">
                             <div id="loadbar" style="display: none;">
