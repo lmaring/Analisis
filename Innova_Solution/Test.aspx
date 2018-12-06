@@ -53,7 +53,7 @@
                         </div>
                         <asp:Image ID="img" runat="server" ImageUrl="https://4.imimg.com/data4/NL/KX/MY-17786222/networking-solution-500x500.jpg" Height="500" Width="500" />
                     <div class="quiz" id="quiz" data-toggle="buttons">
-                        <asp:Button ID="btn_resp1" runat="server" class="btn btn-lg btn-primary btn-block" Text="1"> </asp:Button>
+                        <asp:Button ID="btn_resp1" runat="server" class="btn btn-lg btn-primary btn-block" Text="1" OnClick="btn_resp1_Click"> </asp:Button>
                         <asp:Button ID="btn_resp2" runat="server" class="btn btn-lg btn-primary btn-block" Text="2"> </asp:Button>
                         <asp:Button ID="btn_resp3" runat="server" class="btn btn-lg btn-primary btn-block" Text="3"> </asp:Button>
                         <asp:Button ID="btn_resp4" runat="server" class="btn btn-lg btn-primary btn-block" Text="4"> </asp:Button>

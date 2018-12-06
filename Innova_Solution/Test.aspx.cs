@@ -14,4 +14,9 @@ public partial class Test : System.Web.UI.Page
  
     }
 
+
+    protected void btn_resp1_Click(object sender, EventArgs e)
+    {
+
+    }
 }
