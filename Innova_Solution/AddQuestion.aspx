@@ -47,8 +47,14 @@
                         <asp:Image ID="img_Preview" runat="server" />
                         </div>
                     <div>
-                        <asp:Label ID="lbl_tipo" runat="server" Text="Categoría"></asp:Label>
-                        <asp:TextBox ID="txt_categoria" runat="server"></asp:TextBox>
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        <asp:Label ID="lbl_tipo" runat="server" Text="  Categoría"></asp:Label>
+
+                    &nbsp;
+                        <asp:TextBox ID="txt_categoria" runat="server" Width="288px"></asp:TextBox>
+                        
                     </div>
                     <div class="modal-body">
                         <div class="col-xs-3 col-xs-offset-5">
@@ -75,7 +81,7 @@
                         <br />
                     </div>
                     <br />
-                    <asp:Button ID="btn_guardarPregunta" runat="server" CssClass="btn btn-success" Text="Guardar pregunta" />
+                    <asp:Button ID="btn_guardarPregunta" runat="server" CssClass="btn btn-success" Text="Guardar pregunta" OnClick="btn_guardarPregunta_Click1" />
                 </div>
                 <div class="modal-footer text-muted">
                     <span id="answer"></span>

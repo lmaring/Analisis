@@ -7,13 +7,11 @@ using System.Web.UI.WebControls;
 
 public partial class Test : System.Web.UI.Page
 {
+    TestServices aux = new TestServices();
+
     protected void Page_Load(object sender, EventArgs e)
     {
 
     }
 
-    protected void imgBack_Click(object sender, ImageClickEventArgs e)
-    {
-        Response.Redirect("Accreditation.aspx");
-    }
 }

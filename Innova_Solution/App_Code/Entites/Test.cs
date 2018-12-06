@@ -10,6 +10,7 @@ public class Test
 {
     public int id { get; set; }
     public string nombre { get; set; }
+    public List<Question> preguntas { get; set; }
 
     public Test(int id, string nombre)
     {

@@ -18,9 +18,9 @@ public partial class AddQuestion : System.Web.UI.Page
     {
         Response.Redirect("AddAccreditation.aspx");
     }
-    protected void btn_guardarPregunta_Click(object sender, EventArgs e)
+    protected void btn_guardarPregunta_Click1(object sender, EventArgs e)
     {
-        aux.addPregunta(txtEnunciado.Text);
+        aux.addPregunta(txtEnunciado.Text, txt_categoria.Text);
         if (rd_btn1.Checked)
         {
             aux.addRespuesta(txt_resp1.Text, "C");
@@ -42,15 +42,12 @@ public partial class AddQuestion : System.Web.UI.Page
             aux.addRespuesta(txt_resp3.Text, "C");
             aux.addRespuesta(txt_resp4.Text, "I");
         }
-        else if(rd_btn4.Checked)
+        else if (rd_btn4.Checked)
         {
             aux.addRespuesta(txt_resp1.Text, "I");
             aux.addRespuesta(txt_resp2.Text, "I");
             aux.addRespuesta(txt_resp3.Text, "I");
             aux.addRespuesta(txt_resp4.Text, "C");
         }
-
-        FU_imagenPregunta.
     }
-
 }

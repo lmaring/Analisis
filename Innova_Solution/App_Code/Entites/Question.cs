@@ -9,13 +9,16 @@ using System.Web;
 public class Question
 {
     public int id { get; set; }
+    public int idPrueba { get; set; }
     public string pregunta { get; set; }
-    public List<string> repuesta { get; set; }
+    public string categoria { get; set; }
+    public List<Answer> repuestas { get; set; }
 
-    public Question(int id, string pregunta, List<string> repuesta)
+    public Question(int id, int idPrueba, string pregunta, string categoria)
     {
         this.id = id;
-        this.pregunta =pregunta;
-        this.repuesta = repuesta;
+        this.idPrueba = idPrueba;
+        this.pregunta = pregunta ;
+        this.categoria = categoria;
     }
 }

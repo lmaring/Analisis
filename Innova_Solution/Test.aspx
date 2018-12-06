@@ -36,7 +36,6 @@
         <div>           
             <div class="container-fluid bg-info">
                  <br />
-                 <asp:ImageButton ID="imgBack" runat="server" ImageUrl="~/Imagenes/backarrow.png" Height="50px" OnClick="imgBack_Click" Width="50px" />    
                  <div class="modal-dialog">
                      <div class="modal-content">
                         <div class="modal-header">
