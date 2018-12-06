@@ -53,10 +53,10 @@
                         </div>
                         <asp:Image ID="img" runat="server" ImageUrl="https://4.imimg.com/data4/NL/KX/MY-17786222/networking-solution-500x500.jpg" Height="500" Width="500" />
                     <div class="quiz" id="quiz" data-toggle="buttons">
-                        <label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><asp:RadioButton ID="rd_resp1" runat="server" value="1" ValidationGroup="RadioAnswers" />1</label>
-                        <label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><asp:RadioButton ID="rd_resp2" runat="server" value="2"  ValidationGroup="RadioAnswers" />2</label>
-                        <label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><asp:RadioButton ID="rd_resp3" runat="server" value="3"  ValidationGroup="RadioAnswers" />3</label>
-                        <label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><asp:RadioButton ID="rd_resp4" runat="server" value="4"  ValidationGroup="RadioAnswers" />4</label>
+                        <asp:Button ID="btn_resp1" runat="server" class="btn btn-lg btn-primary btn-block" Text="1"> </asp:Button>
+                        <asp:Button ID="btn_resp2" runat="server" class="btn btn-lg btn-primary btn-block" Text="2"> </asp:Button>
+                        <asp:Button ID="btn_resp3" runat="server" class="btn btn-lg btn-primary btn-block" Text="3"> </asp:Button>
+                        <asp:Button ID="btn_resp4" runat="server" class="btn btn-lg btn-primary btn-block" Text="4"> </asp:Button>
                     </div>
                 </div>
                 <div class="modal-footer text-muted">

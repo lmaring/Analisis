@@ -57,6 +57,18 @@ label .btn-label {
     background-color: #F4743B;
 }
 
+.btn btn-block {
+    background-color: red;
+}
+
+.btn-primary {
+    background-color: red;
+} 
+
+.btn{
+    background-color:red;
+}
+
 label .tabla-block {
     position: absolute;
     left: 0;
