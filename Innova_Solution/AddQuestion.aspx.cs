@@ -49,6 +49,8 @@ public partial class AddQuestion : System.Web.UI.Page
             aux.addRespuesta(txt_resp3.Text, "I");
             aux.addRespuesta(txt_resp4.Text, "C");
         }
+
+        FU_imagenPregunta.
     }
 
 }
