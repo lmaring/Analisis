@@ -34,7 +34,7 @@ public partial class AddAccreditation : System.Web.UI.Page
         counter++;
         TextBox tb = new TextBox();
         tb.ID = "TextBox " + counter;
-        tb.Text = "Nuevo";
+        tb.Text = "Ingrese Examen";
         TableRow tr = new TableRow();
         tr.ID = "TableRow" + counter;
         TableCell Th = new TableCell();
@@ -42,7 +42,7 @@ public partial class AddAccreditation : System.Web.UI.Page
         Th.Text = "" + counter;
         TableCell Th2 = new TableCell();
         Th2.ID = "TableCell" + counter;
-        Th2.Text = "Nombre de Examen ";
+        Th2.Text = " ";
         TableCell Th3 = new TableCell();
         Th3.ID = "TableCell" + counter;
         Th3.Text = "-";
@@ -59,6 +59,7 @@ public partial class AddAccreditation : System.Web.UI.Page
         tr.Controls.Add(Th3);
         tr.Controls.Add(Th4);
         Th4.Controls.Add(btn);
+        Th2.Controls.Add(tb);
         LiteralControl lineBreak = new LiteralControl("<br/>");
         PlaceHolder Ph = new PlaceHolder();
         Ph.ID = "PlaceHolder" + counter;
