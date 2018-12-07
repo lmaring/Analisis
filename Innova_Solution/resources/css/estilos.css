@@ -112,3 +112,10 @@
     padding-left: 0px;
     padding-right: 15px;
 }
+
+.btnAcreditacion {
+    font-family: Arial;
+    font-weight: lighter;
+    margin-left: 7px;
+    border-radius: 15px;
+}

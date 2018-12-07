@@ -43,7 +43,8 @@
                 <th>Nombre:</th>
                 <th>      </th>
                    <th>     
-                       <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Add_Exam" />
+                       <asp:Button style="font-family: Arial; font-weight: lighter; border-radius: 15px;" ID="Button1" runat="server" Text="Agregar" OnClick="Add_Exam" />
+                       <asp:Button style="font-family: Arial; font-weight: lighter; margin-left: 7px; border-radius: 15px;" ID="Button2" runat="server" Text="Confirmar" OnClick="Save_Changes" />
                        <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
                    </th>
               </tr>
@@ -67,6 +68,9 @@
                 <td>-</td>
                 <td><asp:Button ID="btn_CCNA" runat="server" Text="Crear" OnClick="btn_CCNA_Click" /></td>
               </tr>
+                <tr>    
+                 <asp:Panel ID="pnlTableRows" runat="server" BackColor="Azure" CssClass="divdata"></asp:Panel>
+                </tr>
             </tbody>
         </table>
     </div>
