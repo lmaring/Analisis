@@ -8,9 +8,11 @@ using System.Data.SqlClient;
 /// </summary>
 public class TestServices
 {
-    Test test = null;
-    Question question = null;
+    Tests test = null;
+    List<Question> preguntas= new List<Question>();
+    Question preg = null;
     Answer answer = null;
+    List<Answer> repuestas =new List<Answer>();
 
     SqlConnection conexion = new SqlConnection(stringConection());
 
@@ -42,7 +44,6 @@ public class TestServices
             com.Parameters.AddWithValue("Nombre", nombre);
             com.CommandText = sql;
             com.ExecuteNonQuery();
-
             conexion.Close();
             crear = true;
         }
@@ -204,7 +205,7 @@ public class TestServices
     }
 
     /*Metodos para sacar los examenes de la base de datos*/
-    public Test selectTest(int id)
+    public Tests selectTest(int id)
     {
         String sql;
         SqlCommand com;
@@ -222,9 +223,15 @@ public class TestServices
             {
                 int idTest = Int32.Parse(rs[0].ToString());
                 string nombre = rs[1].ToString();
-                test = new Test(idTest, nombre);
+                test = new Tests(idTest, nombre);
             }
             conexion.Close();
+            test.preguntas=selectQuestion(test.id);
+            for (int i = 0; i < test.preguntas.Count; i++)
+            {
+                test.preguntas[i].repuestas = selectAnswer(test.preguntas[i].id);
+            }
+            
         }
         catch (Exception e)
         {
@@ -232,7 +239,7 @@ public class TestServices
         }
         return test;
     }
-    public Question selectQuestion(int id)
+    public List<Question> selectQuestion(int id)
     {
         String sql;
         SqlCommand com;
@@ -252,7 +259,8 @@ public class TestServices
                 int idPrueba = Int32.Parse(rs[1].ToString());
                 string pregunta = rs[2].ToString();
                 string categoria = rs[3].ToString();
-                question = new Question(idQuestion, idPrueba, pregunta,categoria);
+                preguntas.Add(new Question(idQuestion, idPrueba, pregunta, categoria));
+
             }
             conexion.Close();
         }
@@ -260,9 +268,9 @@ public class TestServices
         {
 
         }
-        return question;
+        return preguntas;
     }
-    public Answer selectAnswer(int id)
+    public List<Answer> selectAnswer(int id)
     {
         String sql;
         SqlCommand com;
@@ -282,15 +290,18 @@ public class TestServices
                 int idPregunta = Int32.Parse(rs[1].ToString());
                 string tipo = rs[2].ToString();
                 string respuesta = rs[3].ToString();
-                answer = new Answer(idRespuesta, idPregunta, tipo, respuesta);
+                repuestas.Add(new Answer(idRespuesta, idPregunta, tipo, respuesta));
             }
+
             conexion.Close();
         }
         catch (Exception e)
         {
 
         }
-        return answer;
+        return repuestas;
     }
+
+    /*Metodos segundarios para las listas*/
 
 }
