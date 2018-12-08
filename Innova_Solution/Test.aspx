@@ -7,6 +7,13 @@
     <link href="resources/css/StyleSheet.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <title>Quiz</title>
+    <style type="text/css">
+        .auto-style1 {
+            padding: 15px;
+            border-bottom: 1px solid #e5e5e5;
+            font-size: large;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -38,8 +45,8 @@
                  <br />
                  <div class="modal-dialog">
                      <div class="modal-content">
-                        <div class="modal-header">
-                            <h3><span class="label label-warning" id="qid">1</span> Titulo de la pregunta</h3>
+                        <div class="auto-style1">
+                            <asp:Label ID="Preg" runat="server" Text="Label"><span class="label label-warning" id="qid">1</span> Titulo de la pregunta</asp:Label>
                             <!--El numero tiene que irse incrementando-->
                         </div>
                         <div class="modal-body">
@@ -53,10 +60,10 @@
                         </div>
                         <asp:Image ID="img" runat="server" ImageUrl="https://4.imimg.com/data4/NL/KX/MY-17786222/networking-solution-500x500.jpg" Height="500" Width="500" />
                     <div class="quiz" id="quiz" data-toggle="buttons">
-                        <asp:Button ID="btn_resp1" runat="server" class="btn btn-lg btn-primary btn-block" Text="1" OnClick="btn_resp1_Click"> </asp:Button>
-                        <asp:Button ID="btn_resp2" runat="server" class="btn btn-lg btn-primary btn-block" Text="2"> </asp:Button>
-                        <asp:Button ID="btn_resp3" runat="server" class="btn btn-lg btn-primary btn-block" Text="3"> </asp:Button>
-                        <asp:Button ID="btn_resp4" runat="server" class="btn btn-lg btn-primary btn-block" Text="4"> </asp:Button>
+                        <asp:Button ID="btn_resp1" runat="server" class="btn btn-lg btn-primary btn-block" Text="1" OnClick="btn_resp1_Click"></asp:Button>
+                        <asp:Button ID="btn_resp2" runat="server" class="btn btn-lg btn-primary btn-block" Text="2" OnClick="btn_resp2_Click"> </asp:Button>
+                        <asp:Button ID="btn_resp3" runat="server" class="btn btn-lg btn-primary btn-block" Text="3" OnClick="btn_resp3_Click"> </asp:Button>
+                        <asp:Button ID="btn_resp4" runat="server" class="btn btn-lg btn-primary btn-block" Text="4" OnClick="btn_resp4_Click"> </asp:Button>
                     </div>
                 </div>
                 <div class="modal-footer text-muted">
