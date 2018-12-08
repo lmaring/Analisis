@@ -12,7 +12,6 @@ public class TestServices
     List<Question> preguntas= new List<Question>();
     Question preg = null;
     Answer answer = null;
-    List<Answer> repuestas =new List<Answer>();
 
     SqlConnection conexion = new SqlConnection(stringConection());
 
@@ -272,6 +271,7 @@ public class TestServices
     }
     public List<Answer> selectAnswer(int id)
     {
+        List<Answer> repuestas = new List<Answer>();
         String sql;
         SqlCommand com;
         SqlDataReader rs;
