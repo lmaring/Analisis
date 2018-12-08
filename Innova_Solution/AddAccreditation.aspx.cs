@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 
 public partial class AddAccreditation : System.Web.UI.Page
 {
+    
+    Tests test = null;
     protected void Page_PreInt()
     {
         List<string> keys = Request.Form.AllKeys.Where(key => key.Contains("Tabla dinimica")).ToList();

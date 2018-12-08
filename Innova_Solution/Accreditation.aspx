@@ -66,7 +66,7 @@
                 <th scope="row">3</th>
                 <td>CCNA</td>
                 <td>-</td>
-                <td><asp:Button ID="btn_CCNA" runat="server" Text="Matricular" /></td>
+                <td><asp:Button ID="btn_CCNA" runat="server" Text="Matricular" OnClick="btn_CCNA_Click" /></td>
               </tr>
             </tbody>
         </table>
