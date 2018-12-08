@@ -24,7 +24,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="HomeUser.aspx">Menu Principal</a></li>
-                        <li class="active"><a href="Accreditation.aspx">Acreditaciones</a></li>
+                        <li class="active"><a href="AddAccreditation.aspx">Acreditaciones</a></li>
                         <li><a href="AdminInfo.aspx">Ajuste Cuenta</a></li>
                         <li><a href="Index.aspx">Salir</a></li>
                     </ul>

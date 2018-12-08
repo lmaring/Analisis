@@ -12,7 +12,7 @@ public partial class Test : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        test=aux.selectTest(1);
+        test = (Tests)Session["Test"];
         Preg.Text = test.preguntas[0].pregunta;
         btn_resp1.Text = test.preguntas[0].repuestas[0].respuesta;
         btn_resp2.Text = test.preguntas[0].repuestas[1].respuesta;

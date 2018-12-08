@@ -205,14 +205,14 @@ public class TestServices
     }
 
     /*Metodos para sacar los examenes de la base de datos*/
-    public Tests selectTest(int id)
+    public Tests selectTest(string nom)
     {
         String sql;
         SqlCommand com;
         SqlDataReader rs;
         conexion.Close();
         conexion.Open();
-        sql = "select * from prueba where id="+ id +";";
+        sql = "select * from prueba where nombre='" + nom +"';";
         com = conexion.CreateCommand();
         com.CommandText = sql;
         rs = com.ExecuteReader();

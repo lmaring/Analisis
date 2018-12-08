@@ -7,7 +7,8 @@ using System.Web.UI.WebControls;
 
 public partial class Accreditation : System.Web.UI.Page
 {
-
+    TestServices aux = new TestServices();
+    Tests test = null;
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -19,14 +20,13 @@ public partial class Accreditation : System.Web.UI.Page
     }
     protected void btn_ITIL_Click(object sender, EventArgs e)
     {
-        if(btn_ITIL.Text == "Matricular")
-        {
-            //Response.Redirect("Accreditation.aspx");
-            btn_ITIL.Text = "Realizar quiz";
-        }
-        else
-        {
-            Response.Redirect("Test.aspx");
-        }
+        test = aux.selectTest("ITIL");
+        Session["Test"] = test;
+        Response.Redirect("Test.aspx");
+    }
+
+    protected void btn_CCNA_Click(object sender, EventArgs e)
+    {
+
     }
 }
