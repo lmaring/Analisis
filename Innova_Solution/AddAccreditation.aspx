@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddAccreditation.aspx.cs" Inherits="AddAccreditation" %>
+﻿ b <%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddAccreditation.aspx.cs" Inherits="AddAccreditation" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -20,12 +20,12 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#"><span><img alt="Logo" src="Imagenes/innovaLogo.jpg" height="30" width="30" /></span> </a>
-                </div>
+                </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="HomeUser.aspx">Menu Principal</a></li>
                         <li class="active"><a href="Accreditation.aspx">Acreditaciones</a></li>
-                        <li><a href="UserInfo.aspx">Ajuste Cuenta</a></li>
+                        <li><a href="AdminInfo.aspx">Ajuste Cuenta</a></li>
                         <li><a href="Index.aspx">Salir</a></li>
                     </ul>
                 </div>

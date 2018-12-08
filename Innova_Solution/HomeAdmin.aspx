@@ -42,7 +42,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="HomeAdmin.aspx">Menu Principal</a></li>
                         <li><a href="AddAccreditation.aspx">Acreditaciones</a></li>
-                        <li><a href="UserInfo.aspx">Ajuste Cuenta</a></li>
+                        <li><a href="AdminInfo.aspx">Ajuste Cuenta</a></li>
                         <li><a href="Index.aspx">Salir</a></li>
                     </ul>
                 </div>

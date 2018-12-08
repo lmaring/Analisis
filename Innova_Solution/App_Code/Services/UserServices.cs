@@ -29,7 +29,7 @@ public class UserServices : IUserServices
         
         String sql;
         SqlCommand com;
-        SqlDataReader rs;
+        SqlDataReader rs; 
         conexion.Close();
         conexion.Open();
         sql = "SELECT * FROM Cliente where UserName ='"+userName+"'  and PassWord ='"+pass+"' ;";

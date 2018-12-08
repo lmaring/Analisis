@@ -1,5 +1,4 @@
-﻿
- <%@ Page Language="C#" AutoEventWireup="true" CodeFile="UserInfo.aspx.cs" Inherits="UserInfo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminInfo.aspx.cs" Inherits="AdminInfo" %>
 
 <!DOCTYPE html>
 
@@ -8,7 +7,7 @@
     <link href="resources/css/estilos.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
       
-    <title>Ajuste de Usuario</title>
+    <title>Ajuste de Administrador</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -26,15 +25,14 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="HomeUser.aspx">Menu Principal</a></li>
-                        <li><a href="Accreditation.aspx">Acreditaciones</a></li>
-                        <li class="active"><a href="UserInfo.aspx">Ajuste Cuenta</a></li>
+                        <li><a href="HomeAdmin.aspx">Menu Principal</a></li>
+                        <li><a href="AddAccreditation.aspx">Acreditaciones</a></li>
+                        <li class="active"><a href="AdminInfo.aspx">Ajuste Cuenta</a></li>
                         <li><a href="Index.aspx">Salir</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-
         <div>
             <br />
             <br />
@@ -72,14 +70,10 @@
                         </tr>
                     </tbody>
                   </table>
-                <asp:Button ID="btn_Payment" CssClass="btn btn-primary" runat="server" Text="Premium" OnClick="btn_Payment_Click" />
-                  <a href="#" class="btn btn-primary">Guardar Cambios</a>
+                <asp:Button ID="btn_GuardarCambios" CssClass="btn btn-primary" runat="server" Text="Premium"/>
+                  <!--a href="#" class="btn btn-primary">Guardar Cambios</!--a -->
                 </div>
         </div>
-        
     </form>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>
