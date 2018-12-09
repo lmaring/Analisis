@@ -50,7 +50,7 @@
                             <!--El numero tiene que irse incrementando-->
                         </div>
                         <div class="modal-body">
-                            <div class="col-xs-3 col-xs-offset-5">
+                            <div class="col-xs-3 col-xs-offset-5"> 
                                 <div id="loadbar" style="display: none;">
                                 <div class="blockG" id="rotateG_01"></div>
                                 <div class="blockG" id="rotateG_02"></div>
