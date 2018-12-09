@@ -58,15 +58,27 @@
                                 <div class="blockG" id="rotateG_04"></div>
                            </div>
                         </div>
-<%--                    <div class="quiz" id="quiz" data-toggle="buttons">
-                        
-                    </div>--%>
-                        <asp:Button ID="btn_resp1" runat="server" class="btn btn-lg btn-primary btn-block" Text="1" OnClick="btn_resp1_Click"></asp:Button>
-                        <asp:Button ID="btn_resp2" runat="server" class="btn btn-lg btn-primary btn-block" Text="2" OnClick="btn_resp2_Click"> </asp:Button>
-                        <asp:Button ID="btn_resp3" runat="server" class="btn btn-lg btn-primary btn-block" Text="3" OnClick="btn_resp3_Click"> </asp:Button>
-                        <asp:Button ID="btn_resp4" runat="server" class="btn btn-lg btn-primary btn-block" Text="4" OnClick="btn_resp4_Click"> </asp:Button>
+                    <div class="col-md-12 col-lg-12 col-xs-12">
+                        <div class="funkyradio">
+                            <div class="funkyradio-success" >
+                                <asp:RadioButton ID="rb_resp1"  GroupName="GN_Respuestas" Text="Odio a ASP con todo mi ser enserio es el lenguaje mas molesto y no se si esto va a servir bien" runat="server" />
+                            </div>
+                            <div class="funkyradio-success">
+                                <asp:RadioButton ID="rb_resp2"  GroupName="GN_Respuestas" Text="Odio a ASP con todo mi ser enserio es el lenguaje mas molesto y no se si esto va a servir bien" runat="server" />
+                            </div>
+                            <div class="funkyradio-success">
+                                <asp:RadioButton ID="rb_resp3"  GroupName="GN_Respuestas" Text="Odio a ASP con todo mi ser enserio es el lenguaje mas molesto y no se si esto va a servir bien" runat="server" />
+                            </div>
+                            <div class="funkyradio-success">
+                                <asp:RadioButton ID="rb_resp4"  GroupName="GN_Respuestas" Text="Odio a ASP con todo mi ser enserio es el lenguaje mas molesto y no se si esto va a servir bien" runat="server" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                 
                 <div class="modal-footer text-muted">
+                    <br />
+                <asp:Button ID="btn_ingreso" runat="server" CssClass="btn btn-primary" Text="Siguiente Respuesta" />
                     <span id="answer"></span>
                 </div>
             </div>
