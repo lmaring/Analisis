@@ -17,7 +17,7 @@ public partial class Test : System.Web.UI.Page
     string p3 = "";
     string p4 = "";
     int catPregunta = 0;
-    int catPreg = 1;
+    int catPreg = 0;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -37,8 +37,8 @@ public partial class Test : System.Web.UI.Page
 
     protected void btn_ingreso_Click(object sender, EventArgs e)
     {
-
         catPregunta = test.preguntas.Count;
+        catPreg = (int)Session["cantPreg"];
         if (catPreg<catPregunta)
         {
             if (rb_resp1.Checked)
@@ -46,7 +46,10 @@ public partial class Test : System.Web.UI.Page
                 p1 = test.preguntas[pregunta].repuestas[0].tipo;
                 if (p1.Equals("C"))
                 {
-                    pCorrecta = pCorrecta + 1;
+                    pCorrecta = (int)Session["correctas"];
+                    pCorrecta = pCorrecta + 1;      
+                    Session["correctas"] = pCorrecta;
+
                 }
                 else
                 {
@@ -54,6 +57,7 @@ public partial class Test : System.Web.UI.Page
                 }
                 pregunta = pregunta + 1;
                 catPreg = catPreg + 1;
+                Session["cantPreg"] = catPreg;
                 setBtn(pregunta);
             }
             else if (rb_resp2.Checked)
@@ -104,8 +108,20 @@ public partial class Test : System.Web.UI.Page
         }
         else{
             Response.Write("<script>alert('Contraseña o Usuario Incorrecto!');</script>");
+            User aux = null;
+            Session["User"] = aux;
+            pCorrecta = (int)Session["correctas"]
+            int nota = calculo(catPregunta,pCorrecta);
+            
 
         }
 
+    }
+
+    public int calculo(int cant, int correctas)
+    {
+        int nota;
+        nota = (correctas * 100) / cant;
+        return nota;
     }
 }
