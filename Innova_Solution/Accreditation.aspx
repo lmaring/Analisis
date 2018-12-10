@@ -51,7 +51,7 @@
                 <th scope="row">1</th>
                 <td>PMP</td>
                 <td>Matriculado</td>
-                <td><asp:Button ID="btn_Scrum" runat="server" Text="Realizar quiz" OnClick="btn_quizScrum_Click" /></td>
+                <td><asp:Button ID="btn_PMP" runat="server" Text="Realizar quiz" OnClick="btn_quizPMP_Click" /></td>
               </tr>
               <tr>
                 <th scope="row">2</th>

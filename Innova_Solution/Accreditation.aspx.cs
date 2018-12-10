@@ -9,15 +9,14 @@ public partial class Accreditation : System.Web.UI.Page
 {
     TestServices aux = new TestServices();
     Tests test = null;
+    int catPreg = 0;
+    int correctas= 0;
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        Session["cantPreg"] = catPreg;
+        Session["correctas"]= correctas;
     }
 
-    protected void btn_quizScrum_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("Test.aspx");
-    }
     protected void btn_ITIL_Click(object sender, EventArgs e)
     {
         test = aux.selectTest("ITIL");
@@ -25,8 +24,21 @@ public partial class Accreditation : System.Web.UI.Page
         Response.Redirect("Test.aspx");
     }
 
+
+
     protected void btn_CCNA_Click(object sender, EventArgs e)
     {
+        test = aux.selectTest("CCNA");
+        Session["Test"] = test;
+        Response.Redirect("Test.aspx");
+    }
+
+    protected void btn_quizPMP_Click(object sender, EventArgs e)
+    {
+        test = aux.selectTest("PMP");
+        Session["Test"] = test;
+        Response.Redirect("Test.aspx");
+
 
     }
 }
