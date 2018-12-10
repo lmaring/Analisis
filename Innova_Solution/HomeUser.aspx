@@ -1,6 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="HomeUser.aspx.cs" Inherits="HomeUser" %>
-
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -35,7 +33,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="auto-style1" href="#"><span><img alt="Logo" src="Imagenes/innovaLogo.jpg" height="30 width="30" /></span> </a>
+                    <a class="auto-style1" href="#"><span><img alt="Logo" src="Imagenes/innovaLogo.jpg" height="50 width="50" /></span> </a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -52,7 +50,7 @@
         <br />
         <br />
         <br />
-        <h1>Menu Principal</h1>
+        <h2>Acerca de nosotros</h2>
          <p class="text-left"> Innova Solutions se encarga en capacitar personas en procesos de capacitacion como lo
             que seria institutos y tienen convenios con varias empresas para certificar como lo es en 
             cisco, Adobe, PMP, ITIL, COBIT, SCRUM, SIX SIGMA, Manipulacion de Alimento y pruebas de colegios 
@@ -62,7 +60,43 @@
             capacidad selecionarla sobre una base de datos de preguntas pero solo se muestran 10 por cuestionaro y son
             respuestas de si o no, tambien tiene la capacidad de respuesta multiple. tener la capacidad preguntas, nota 
             total, tiempo maximo de contestar ciertas preguntas. maximo de nota para aprovar el examen y que tipo de cuestionario es.</p>
+        <br>
+        <br>
+        <br>
+        <div class = "globalImage">
+
+<div class="gallery">
+  
+    <img src="Imagenes/itil.png" alt="Itil" width="600" height="400">
+  
+  <div class="desc"><p>Es importante destacar el esfuerzo que hacen muchas organizaciones al querer brindar servicios 
+      de calidad a través de las Mesas de Ayuda (help desk) que facilitan la atención de las solicitudes tanto de usuarios 
+      como de clientes  ya sea por distintos canales como el telefónico, web, portal, chat, correo entre otros. Por otro 
+      lado lo que hace diferente al Service Desk  es la evidencia de que el negocio ha adaptado a ITIL como framework o 
+      marco de trabajo para sus diferentes operaciones, es decir, que ha transformado al departamento de TI para darle 
+      una orientación al servicio y a su vez lo alinea con los procesos Core del negocio.</p></div>
+</div>
+
+            <div class="gallery" >
+    <img src="Imagenes/cisco-icon.png" alt="Cisco" width="700" height="500">
+  <div class="desc"><p> Los Técnicos CCNA son capaces de instalar y configurar redes de área local (LAN),
+      redes de área extensa (WAN) y servicios de acceso a redes. Las posiciones profesionales más frecuentes
+      para un técnico CCNA son las de Ingeniero de soporte técnico, Técnico de campo formando parte de un equipo
+      especializado en redes y Técnico comercial de preventa de instalaciones.</p></div>
+</div>
+
+<div class="gallery">
+ 
+    <img src="Imagenes/PMP.png" alt="PmP" width="600" height="400">
+
+  <div class="desc"><p>La certificación Project Management está enfocada a cubrir la creciente necesidad de contar
+      con personal cualificado en este campo y, a su vez, con el fin de profesionalizar a directivos y gerentes.
+      Gracias a ella, directivos o aspirantes a serlo pueden profesionalizarse en la gestión de proyectos con todas 
+      las garantías, abarcando también el desarrollo de competencias personales y de rendimiento acordes con dicho rol.</p></div>
+</div>
+
     </div>
+
 
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

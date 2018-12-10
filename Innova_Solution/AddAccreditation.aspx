@@ -52,7 +52,7 @@
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>SCRUM</td>
+                <td>PMP</td>
                 <td>-</td>
                 <td><asp:Button ID="btn_Scrum" runat="server" Text="Crear" OnClick="btn_quizScrum_Click" /></td>
               </tr>

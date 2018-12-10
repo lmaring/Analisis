@@ -44,15 +44,12 @@
                 <th>#</th>
                 <th>Nombre:</th>
                 <th>      </th>
-                  <th>  <asp:Button ID="Button1" runat="server" Text="Button" Class="Add_Exam"/>   
-                      <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
-                  </th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>SCRUM</td>
+                <td>PMP</td>
                 <td>Matriculado</td>
                 <td><asp:Button ID="btn_Scrum" runat="server" Text="Realizar quiz" OnClick="btn_quizScrum_Click" /></td>
               </tr>
