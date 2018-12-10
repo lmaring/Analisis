@@ -78,7 +78,7 @@
                  
                 <div class="modal-footer text-muted">
                     <br />
-                <asp:Button ID="btn_ingreso" runat="server" CssClass="btn btn-primary" Text="Siguiente Respuesta" />
+                <asp:Button ID="btn_ingreso" runat="server" CssClass="btn btn-primary" Text="Siguiente Respuesta" OnClick="btn_ingreso_Click" />
                     <span id="answer"></span>
                 </div>
             </div>
