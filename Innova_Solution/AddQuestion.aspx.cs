@@ -49,5 +49,11 @@ public partial class AddQuestion : System.Web.UI.Page
             aux.addRespuesta(txt_resp3.Text, "I");
             aux.addRespuesta(txt_resp4.Text, "C");
         }
+
+        txt_resp1.Text = String.Empty;
+        txt_resp2.Text = String.Empty;
+        txt_resp3.Text = String.Empty;
+        txt_resp4.Text = String.Empty;
+        txtEnunciado.Text = String.Empty;
     }
 }
