@@ -37,6 +37,7 @@ public partial class Test : System.Web.UI.Page
 
     protected void btn_ingreso_Click(object sender, EventArgs e)
     {
+
         catPregunta = test.preguntas.Count;
         if (catPreg<catPregunta)
         {
