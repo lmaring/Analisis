@@ -20,6 +20,7 @@ public partial class AddQuestion : System.Web.UI.Page
     }
     protected void btn_guardarPregunta_Click1(object sender, EventArgs e)
     {
+
         aux.addPregunta(txtEnunciado.Text, txt_categoria.Text);
         if (rd_btn1.Checked)
         {
