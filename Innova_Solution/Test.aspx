@@ -72,7 +72,7 @@
                                 <asp:RadioButton ID="rb_resp2"  GroupName="GN_Respuestas" Text="Odio a ASP con todo mi ser enserio es el lenguaje mas molesto y no se si esto va a servir bien" runat="server" />
                             </div>
                             <div class="funkyradio-success">
-                                <asp:RadioButton ID="rb_resp3"  GroupName="GN_Respuestas" Text="Odio a ASP con todo mi ser enserio es el lenguaje mas molesto y no se si esto va a servir bien" runat="server" />
+                                <asp:RadioButton ID="rb_resp3"  GroupName="GN_Respuestas" Text="Odio a ASP con todo mi ser enserio es el lenguaje mas molesto y no se si esto va a servir bien" runat="server" Font-Size="Medium" />
                             </div>
                             <div class="funkyradio-success">
                                 <asp:RadioButton ID="rb_resp4"  GroupName="GN_Respuestas" Text="Odio a ASP con todo mi ser enserio es el lenguaje mas molesto y no se si esto va a servir bien" runat="server" />

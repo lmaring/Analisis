@@ -76,7 +76,9 @@
               </tr>
                 <tr id="TrBtn2" runat="server" Visible="false">
                 <th scope="row">5</th>
-                <td> <asp:TextBox ID="TextBoxExamen2" runat="server"></asp:TextBox></td>
+                <td> <asp:TextBox ID="TextBoxExamen2" runat="server"></asp:TextBox>
+
+                </td>
                 <td>-</td>
                 <td><asp:Button ID="btn_examen" runat="server" Text="Crear" OnClick="btn_Examen_Click"/></td>
               </tr>

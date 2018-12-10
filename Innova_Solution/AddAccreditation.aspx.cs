@@ -10,7 +10,10 @@ public partial class AddAccreditation : System.Web.UI.Page
     
     protected void Page_Load()
     {
-        if (counter == 2)
+        if (counter == 1)
+        {
+            TrBtn1.Visible = true;
+        }else if(counter == 2)
         {
             TrBtn1.Visible = true;
             TrBtn2.Visible = true;
@@ -20,7 +23,7 @@ public partial class AddAccreditation : System.Web.UI.Page
 
     protected void Save_Changes(object sender, EventArgs e)
     {
-     counter = 0;       
+        counter = 0;
     }
     static int counter = 0;
     protected void Add_Exam(object sender, EventArgs e)
@@ -65,5 +68,6 @@ public partial class AddAccreditation : System.Web.UI.Page
     protected void btn_SCRUM_Click(object sender, EventArgs e)
     {
         Response.Redirect("AddQuestion.aspx");
+
     }
 }
