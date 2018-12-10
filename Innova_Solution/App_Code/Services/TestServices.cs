@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 public class TestServices
 {
     Tests test = null;
+    Grade grade = null;
     List<Question> preguntas= new List<Question>();
     Question preg = null;
     Answer answer = null;
@@ -359,6 +360,39 @@ public class TestServices
 
         }
         return repuestas;
+    }
+    public List<Grade> selectNotas(int user)
+    {
+        List<Grade> notas = new List<Grade>();
+        String sql;
+        SqlCommand com;
+        SqlDataReader rs;
+        conexion.Close();
+        conexion.Open();
+        sql = "select * from nota where IdStudent='" + user + "';";
+        com = conexion.CreateCommand();
+        com.CommandText = sql;
+        rs = com.ExecuteReader();
+
+        try
+        {
+            while (rs.Read())
+            {
+                int id = Int32.Parse(rs[0].ToString());
+                int idStudent = Int32.Parse(rs[1].ToString());
+                int idTest = Int32.Parse(rs[2].ToString());
+                int nota = Int32.Parse(rs[4].ToString());
+                grade = new Grade(idStudent,nota,id,idTest);
+                notas.Add(grade);
+            }
+            conexion.Close();
+
+        }
+        catch (Exception e)
+        {
+
+        }
+        return notas;
     }
 
 

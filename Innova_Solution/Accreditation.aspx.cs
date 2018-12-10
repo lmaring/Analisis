@@ -11,10 +11,13 @@ public partial class Accreditation : System.Web.UI.Page
     Tests test = null;
     int catPreg = 0;
     int correctas= 0;
+    int pregunta = 0;
     protected void Page_Load(object sender, EventArgs e)
     {
         Session["cantPreg"] = catPreg;
         Session["correctas"]= correctas;
+        Session["pregunta"] = pregunta;
+
     }
 
     protected void btn_ITIL_Click(object sender, EventArgs e)
