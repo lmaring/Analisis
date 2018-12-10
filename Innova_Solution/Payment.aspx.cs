@@ -22,10 +22,9 @@ public partial class Payment : System.Web.UI.Page
         Response.Redirect("Accreditation.aspx");
     }
 
-
-
-    //protected void btn_pagar_Click(object sender, EventArgs e)
-    //{
-    //    ScriptManager.RegisterClientScriptBlock(this, GetType(), "mykey", "revisarValidezCampos()", true);
-    //}
+    protected void btn_pagar_Click(object sender, EventArgs e)
+    {
+        //Cambiar en la base de datos el tipo del cliente
+        Response.Redirect("Accreditation.aspx");
+    }
 }

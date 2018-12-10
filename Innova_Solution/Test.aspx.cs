@@ -39,7 +39,7 @@ public partial class Test : System.Web.UI.Page
     {
 
         catPregunta = test.preguntas.Count;
-        if (catPreg<catPregunta)
+        if (catPreg < catPregunta)
         {
             if (rb_resp1.Checked)
             {
@@ -102,9 +102,9 @@ public partial class Test : System.Web.UI.Page
                 setBtn(pregunta);
             }
         }
-        else{
+        else
+        {
             Response.Write("<script>alert('Contraseña o Usuario Incorrecto!');</script>");
-
         }
 
     }
