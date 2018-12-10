@@ -65,6 +65,18 @@
                 <td>-</td>
                 <td><asp:Button ID="btn_CCNA" runat="server" Text="Matricular" OnClick="btn_CCNA_Click" /></td>
               </tr>
+                <tr id="TrBtn1" runat="server" Visible="false">
+                <th scope="row">4</th>
+                <td> <asp:TextBox ID="TextBoxScrum" runat="server"></asp:TextBox></td>
+                <td>-</td>
+                <td><asp:Button ID="Button1" runat="server" Text="Crear" OnClick="btn_SCRUM_Click"/></td>
+              </tr>
+                <tr id="TrBtn2" runat="server" Visible="false">
+                <th scope="row">5</th>
+                <td> <asp:TextBox ID="TextBoxExamen2" runat="server"></asp:TextBox></td>
+                <td>-</td>
+                <td><asp:Button ID="btn_examen" runat="server" Text="Crear" OnClick="btn_Examen_Click"/></td>
+              </tr>
             </tbody>
         </table>
     </div>

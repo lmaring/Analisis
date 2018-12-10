@@ -41,4 +41,14 @@ public partial class Accreditation : System.Web.UI.Page
 
 
     }
+
+    protected void btn_SCRUM_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btn_Examen_Click(object sender, EventArgs e)
+    {
+
+    }
 }
