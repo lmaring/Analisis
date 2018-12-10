@@ -33,7 +33,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="auto-style1" href="#"><span><img alt="Logo" src="Imagenes/innovaLogo.jpg" height="50 width="50" /></span> </a>
+                    <a class="auto-style1" href="#"><span><img alt="Logo" src="Imagenes/innovaLogo.jpg" height="40 width="40" /></span> </a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -50,7 +50,10 @@
         <br />
         <br />
         <br />
+        <br />
         <h2>Acerca de nosotros</h2>
+        <br>
+        <br>
          <p class="text-left"> Innova Solutions se encarga en capacitar personas en procesos de capacitacion como lo
             que seria institutos y tienen convenios con varias empresas para certificar como lo es en 
             cisco, Adobe, PMP, ITIL, COBIT, SCRUM, SIX SIGMA, Manipulacion de Alimento y pruebas de colegios 
@@ -69,7 +72,7 @@
   
     <img src="Imagenes/itil.png" alt="Itil" width="600" height="400">
   
-  <div class="desc"><p>Es importante destacar el esfuerzo que hacen muchas organizaciones al querer brindar servicios 
+  <div class="desc" width="450"><p>Es importante destacar el esfuerzo que hacen muchas organizaciones al querer brindar servicios 
       de calidad a través de las Mesas de Ayuda (help desk) que facilitan la atención de las solicitudes tanto de usuarios 
       como de clientes  ya sea por distintos canales como el telefónico, web, portal, chat, correo entre otros. Por otro 
       lado lo que hace diferente al Service Desk  es la evidencia de que el negocio ha adaptado a ITIL como framework o 
@@ -78,11 +81,20 @@
 </div>
 
             <div class="gallery" >
-    <img src="Imagenes/cisco-icon.png" alt="Cisco" width="700" height="500">
-  <div class="desc"><p> Los Técnicos CCNA son capaces de instalar y configurar redes de área local (LAN),
+    <img src="Imagenes/cisco-icon.png" alt="Cisco" width="600" height="500">
+  <div class="desc" width="450"><p> Los Técnicos CCNA son capaces de instalar y configurar redes de área local (LAN),
       redes de área extensa (WAN) y servicios de acceso a redes. Las posiciones profesionales más frecuentes
       para un técnico CCNA son las de Ingeniero de soporte técnico, Técnico de campo formando parte de un equipo
-      especializado en redes y Técnico comercial de preventa de instalaciones.</p></div>
+      especializado en redes y Técnico comercial de preventa de instalaciones.
+      Existen cinco niveles de certificación:<br> 
+      <ul>
+          <li>Associate (Asociado)</li>
+          <li>Professional (Profesional)</li>
+          <li>Expert (Experto)</li>
+          <li>Architect (Arquitecto)</li>
+      </ul>
+
+                    </p></div>
 </div>
 
 <div class="gallery">
