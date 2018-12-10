@@ -14,7 +14,7 @@ public partial class Accreditation : System.Web.UI.Page
 
     }
 
-    protected void btn_quizScrum_Click(object sender, EventArgs e)
+    protected void btn_quizPMP_Click(object sender, EventArgs e)
     {
         Response.Redirect("Test.aspx");
     }
@@ -26,6 +26,16 @@ public partial class Accreditation : System.Web.UI.Page
     }
 
     protected void btn_CCNA_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btn_SCRUM_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btn_Examen_Click(object sender, EventArgs e)
     {
 
     }

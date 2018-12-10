@@ -110,6 +110,35 @@ public class TestServices
         }
         return crear;
     }
+    public bool addNota(int Idstudent, int IdTest, int Nota)
+    {
+        bool crear = false;
+        conexion.Close();
+        try
+        {
+            int id = CantGrade() + 1;
+            String sql;
+            SqlCommand com;
+            conexion.Open();
+            sql = " INSERT INTO nota(Id, IdStudent, IdTest, Nota)" +
+               "values(@Id,@IdStudent,@IdTest,@Nota); ";
+            com = conexion.CreateCommand();
+            com.Parameters.AddWithValue("Id", id);
+            com.Parameters.AddWithValue("IdStudent", Idstudent);
+            com.Parameters.AddWithValue("IdTest", IdTest);
+            com.Parameters.AddWithValue("Nota", Nota);
+            com.CommandText = sql;
+            com.ExecuteNonQuery();
+            conexion.Close();
+            crear = true;
+        }
+        catch (Exception e)
+        {
+            crear = false;
+        }
+        return crear;
+    }
+
 
     /*Para sacar las cantidad de que hay en cada table */
     public int CantPrueba()
@@ -184,6 +213,36 @@ public class TestServices
             conexion.Close();
             conexion.Open();
             sql = "select count(*)from respuesta;";
+            com = conexion.CreateCommand();
+            com.CommandText = sql;
+            rs = com.ExecuteReader();
+
+            while (rs.Read())
+            {
+                cant = Int32.Parse(rs[0].ToString());
+            }
+            conexion.Close();
+
+        }
+        catch (Exception e)
+        {
+        }
+
+
+        return cant;
+    }
+    public int CantGrade()
+    {
+        int cant = 0;
+
+        try
+        {
+            String sql;
+            SqlCommand com;
+            SqlDataReader rs;
+            conexion.Close();
+            conexion.Open();
+            sql = "select count(*)from nota;";
             com = conexion.CreateCommand();
             com.CommandText = sql;
             rs = com.ExecuteReader();
@@ -301,6 +360,8 @@ public class TestServices
         }
         return repuestas;
     }
+
+
 
     /*Metodos segundarios para las listas*/
 
