@@ -28,6 +28,7 @@
                         <li><a href="HomeUser.aspx">Menu Principal</a></li>
                         <li class="active"><a href="Accreditation.aspx">Acreditaciones</a></li>
                         <li><a href="UserInfo.aspx">Ajuste Cuenta</a></li>
+                        <li><a href="Grades.aspx">Record de Notas</a></li>
                         <li><a href="Index.aspx">Salir</a></li>
                     </ul>
                 </div>
