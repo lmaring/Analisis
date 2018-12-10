@@ -15,6 +15,7 @@ public partial class CreateUser : System.Web.UI.Page
     {
 
     }
+
     public static IUserServices userServices = new UserServices();
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -26,24 +27,30 @@ public partial class CreateUser : System.Web.UI.Page
         string passwordUser = TxtPassWord.Text;
         string pass2 = txtPass2.Text;
         string mail = TxtMail.Text;
-        int telefono=int.Parse(TextTel.Text);
+        int telefono = int.Parse(TextTel.Text);
         string profesion= TextProf.Text;
         string vivienda= TextViv.Text;
         int id = userServices.lastId();
-        bool UsersAux = userServices.CreateUser(nameUser, passwordUser, id, mail, telefono, profesion, vivienda);
+        bool validaciones = true;
 
-        if (pass.Success)
+
+        if (!pass.Success)
         {
+            validaciones = false;
             Response.Write("<script>alert('Escriba al menos un caracter especial y una mayúscula en la contraseña');</script>");
         }else if (passwordUser != pass2)
         {
+            validaciones = false;
             Response.Write("<script>alert('Las contraseñas deben de coincidir');</script>");
         }
-        else if (UsersAux == true)
+
+
+
+        if ( validaciones && (userServices.CreateUser(nameUser, passwordUser, id, mail, telefono, profesion, vivienda) ))
         {
             Response.Write("<script>alert('Usuario Creado');</script>");
         }
-        else
+        else if(validaciones)
         {
             Response.Write("<script>alert('Ya Existe este usurario');</script>");
         }

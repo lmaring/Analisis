@@ -13,6 +13,11 @@
             border-bottom: 1px solid #e5e5e5;
             font-size: large;
         }
+        .auto-style2 {
+            min-height: 205px;
+            position: relative;
+            padding: 15px;
+        }
     </style>
 </head>
 <body>
@@ -49,7 +54,7 @@
                             <asp:Label ID="Preg" runat="server" Text="Label"><span class="label label-warning" id="qid">1</span> Titulo de la pregunta</asp:Label>
                             <!--El numero tiene que irse incrementando-->
                         </div>
-                        <div class="modal-body">
+                        <div class="auto-style2">
                             <div class="col-xs-3 col-xs-offset-5"> 
                                 <div id="loadbar" style="display: none;">
                                 <div class="blockG" id="rotateG_01"></div>
@@ -67,16 +72,18 @@
                                 <asp:RadioButton ID="rb_resp2"  GroupName="GN_Respuestas" Text="Odio a ASP con todo mi ser enserio es el lenguaje mas molesto y no se si esto va a servir bien" runat="server" />
                             </div>
                             <div class="funkyradio-success">
-                                <asp:RadioButton ID="rb_resp3"  GroupName="GN_Respuestas" Text="Odio a ASP con todo mi ser enserio es el lenguaje mas molesto y no se si esto va a servir bien" runat="server" />
+                                <asp:RadioButton ID="rb_resp3"  GroupName="GN_Respuestas" Text="Odio a ASP con todo mi ser enserio es el lenguaje mas molesto y no se si esto va a servir bien" runat="server" Font-Size="Medium" />
                             </div>
                             <div class="funkyradio-success">
                                 <asp:RadioButton ID="rb_resp4"  GroupName="GN_Respuestas" Text="Odio a ASP con todo mi ser enserio es el lenguaje mas molesto y no se si esto va a servir bien" runat="server" />
                             </div>
                         </div>
                     </div>
+                <asp:Button ID="btn_enviar" runat="server" CssClass="btn btn-primary" Text="Enviar Examen" OnClick="btn_enviar_Click" />
                 </div>
                  
                 <div class="modal-footer text-muted">
+                    <br />
                     <br />
                 <asp:Button ID="btn_ingreso" runat="server" CssClass="btn btn-primary" Text="Siguiente Respuesta" OnClick="btn_ingreso_Click" />
                     <span id="answer"></span>

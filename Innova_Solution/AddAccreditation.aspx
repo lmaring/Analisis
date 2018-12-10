@@ -54,7 +54,7 @@
                 <th scope="row">1</th>
                 <td>PMP</td>
                 <td>-</td>
-                <td><asp:Button ID="btn_Scrum" runat="server" Text="Crear" OnClick="btn_quizScrum_Click" /></td>
+                <td><asp:Button ID="btn_PMP" runat="server" Text="Crear" OnClick="btn_quizPMP_Click" /></td>
               </tr>
               <tr>
                 <th scope="row">2</th>
@@ -68,9 +68,20 @@
                 <td>-</td>
                 <td><asp:Button ID="btn_CCNA" runat="server" Text="Crear" OnClick="btn_CCNA_Click" /></td>
               </tr>
-                <tr>    
-                 <asp:Panel ID="pnlTableRows" runat="server" BackColor="Azure" CssClass="divdata"></asp:Panel>
-                </tr>
+                <tr id="TrBtn1" runat="server" Visible="false">
+                <th scope="row">4</th>
+                <td> <asp:TextBox ID="TextBoxScrum" runat="server"></asp:TextBox></td>
+                <td>-</td>
+                <td><asp:Button ID="btn_SCRUM" runat="server" Text="Crear" OnClick="btn_SCRUM_Click"/></td>
+              </tr>
+                <tr id="TrBtn2" runat="server" Visible="false">
+                <th scope="row">5</th>
+                <td> <asp:TextBox ID="TextBoxExamen2" runat="server"></asp:TextBox>
+
+                </td>
+                <td>-</td>
+                <td><asp:Button ID="btn_examen" runat="server" Text="Crear" OnClick="btn_Examen_Click"/></td>
+              </tr>
             </tbody>
         </table>
     </div>
